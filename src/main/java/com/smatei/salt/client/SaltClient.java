@@ -33,6 +33,7 @@ public class SaltClient
 {
   private static final Logger logger = Logger.getLogger(SaltClient.class.getName());
   private final ClientConfig config;
+  private RestTemplate restTemplate;
 
   /**
    * @param config
@@ -48,7 +49,7 @@ public class SaltClient
     String apiurl = RuntimeUtils.GetSystemProperty("apiurl", false);
     String apiuser = RuntimeUtils.GetSystemProperty("apiuser", false);
     String apipassword = RuntimeUtils.GetSystemProperty("apipassword", false);
-    ClientConfig config = new ClientConfig(new URI(apiurl), apiuser, apipassword);
+    ClientConfig config = new ClientConfig(new URI(apiurl), apiuser, apipassword, AuthModule.PAM);
 
     String proxyHost = RuntimeUtils.GetSystemProperty("proxyhost", true);
     String proxyPort = RuntimeUtils.GetSystemProperty("proxyport", true);
@@ -62,11 +63,11 @@ public class SaltClient
 
     SaltClient client = new SaltClient(config);
 
-    logger.info(client.Call(Glob.ALL, "sys.list_modules", null));
-    logger.info(client.Call(Glob.ALL, "sys.argspec", "test"));
+    logger.info(client.login());
+    logger.info(client.run(Glob.ALL, Client.LOCAL, "test.ping", null));
   }
 
-  public String Call(ITarget<?> target, String command, String arg)
+  public String run(ITarget<?> target, Client client, String command, String arg)
   {
     RestTemplate template = createRestTemplate(config.getProxy());
 
@@ -74,7 +75,7 @@ public class SaltClient
     requestParams.addProperty("username", config.getUsername());
     requestParams.addProperty("password", config.getPassword());
     requestParams.addProperty("eauth", "pam");
-    requestParams.addProperty("client", "local");
+    requestParams.addProperty("client", client.getValue());
     target.getProps().forEach((key, value) ->
     {
       requestParams.addProperty(key, value.toString());
@@ -93,13 +94,30 @@ public class SaltClient
     return answer;
   }
 
-  private RestTemplate createRestTemplate()
+  public String login()
   {
-    return createRestTemplate(null);
+    RestTemplate template = createRestTemplate(config.getProxy());
+
+    JsonObject requestParams = new JsonObject();
+    requestParams.addProperty("username", config.getUsername());
+    requestParams.addProperty("password", config.getPassword());
+    requestParams.addProperty("eauth", "pam");
+
+    HttpHeaders headers = new HttpHeaders();
+    headers.setContentType(MediaType.APPLICATION_JSON);
+
+    HttpEntity<String> entity = new HttpEntity<String>(requestParams.toString(), headers);
+    String answer = template.postForObject(config.getUrl() + "/login", entity, String.class);
+    return answer;
   }
 
   private RestTemplate createRestTemplate(Proxy proxy)
   {
+    if (restTemplate != null)
+    {
+      return restTemplate;
+    }
+
     HttpClientBuilder clientBuilder = HttpClientBuilder.create();
 
     if (proxy != null)
@@ -113,10 +131,11 @@ public class SaltClient
       clientBuilder.setProxy(myProxy).setDefaultCredentialsProvider(credsProvider);
     }
 
-    HttpClient httpClient = clientBuilder.build();
+    HttpClient httpClient = clientBuilder.disableCookieManagement().build();
     HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory();
     factory.setHttpClient(httpClient);
 
-    return new RestTemplate(factory);
+    restTemplate = new RestTemplate(factory);
+    return restTemplate;
   }
 }

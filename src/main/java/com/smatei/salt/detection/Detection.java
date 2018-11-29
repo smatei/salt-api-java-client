@@ -16,17 +16,21 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.smatei.salt.client.AuthModule;
+import com.smatei.salt.client.Client;
 import com.smatei.salt.client.ClientConfig;
 import com.smatei.salt.client.SaltClient;
 import com.smatei.salt.target.Glob;
 import com.smatei.salt.utils.RuntimeUtils;
 
 /**
- * Use the saltstack docker setup from {@linktourl https://github.com/smatei/salt-api-java-client/tree/master/docker}
- * to detect modules and arguments for each module item. Save them in json files somewhere in resources so that
+ * Use the saltstack docker setup to detect modules and arguments for each module item. Save them in json files somewhere in resources so that
  * we can define classes for each module.
  *
  * TODO: Find a solution to automatically run this with maven at library build time if possible.
+ *
+ * @see <a
+ *      href="https://github.com/smatei/salt-api-java-client/tree/master/docker">https://github.com/smatei/salt-api-java-client/tree/master/docker</a>
  *
  * @author smatei
  *
@@ -43,7 +47,7 @@ public class Detection
 
   public void DetectModules()
   {
-    String jsonResponse = client.Call(Glob.ALL, "sys.list_modules", null);
+    String jsonResponse = client.run(Glob.ALL, Client.LOCAL, "sys.list_modules", null);
 
     // {"return": [{"minion": ["aliases", "alternatives", ..., "test", "timezone", "tls", "travisci", "uptime", "user", ...]}]}
     JsonArray modules = ParseMinionResponse(jsonResponse).getAsJsonArray();
@@ -52,7 +56,7 @@ public class Detection
     {
       logger.info("processing module " + module.getAsString());
 
-      String moduleJsonResponse = client.Call(Glob.ALL, "sys.argspec", "test");
+      String moduleJsonResponse = client.run(Glob.ALL, Client.LOCAL, "sys.argspec", "test");
       JsonObject moduleJson = ParseMinionResponse(moduleJsonResponse).getAsJsonObject();
 
       logger.info(moduleJson.toString());
@@ -72,7 +76,7 @@ public class Detection
     String apiurl = RuntimeUtils.GetSystemProperty("apiurl", false);
     String apiuser = RuntimeUtils.GetSystemProperty("apiuser", false);
     String apipassword = RuntimeUtils.GetSystemProperty("apipassword", false);
-    ClientConfig config = new ClientConfig(new URI(apiurl), apiuser, apipassword);
+    ClientConfig config = new ClientConfig(new URI(apiurl), apiuser, apipassword, AuthModule.PAM);
 
     SaltClient client = new SaltClient(config);
     Detection detection = new Detection(client);

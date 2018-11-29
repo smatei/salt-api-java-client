@@ -1,7 +1,10 @@
 package com.smatei.salt.target;
 
 /**
- * Nodegroup target: {@linktourl https://docs.saltstack.com/en/latest/topics/targeting/nodegroups.htm}
+ * Nodegroup target
+ *
+ * @see <a
+ *      href="https://docs.saltstack.com/en/latest/topics/targeting/nodegroups.htm">https://docs.saltstack.com/en/latest/topics/targeting/nodegroups.htm</a>
  *
  * @author smatei
  *

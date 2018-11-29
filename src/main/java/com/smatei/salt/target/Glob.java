@@ -1,7 +1,10 @@
 package com.smatei.salt.target;
 
 /**
- * Glob matching: {@linktourl https://docs.saltstack.com/en/latest/topics/targeting/globbing.htm}
+ * Glob matching
+ *
+ * @see <a
+ *      href="https://docs.saltstack.com/en/latest/topics/targeting/globbing.htm">https://docs.saltstack.com/en/latest/topics/targeting/globbing.htm</a>
  *
  * @author smatei
  *

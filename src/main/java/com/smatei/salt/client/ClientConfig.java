@@ -13,15 +13,17 @@ import com.smatei.salt.net.Proxy;
 public class ClientConfig
 {
   private final URI url;
-  private Proxy proxy;
   private final String username;
   private final String password;
+  private final AuthModule authModule;
+  private Proxy proxy;
 
-  public ClientConfig(URI url, String username, String password)
+  public ClientConfig(URI url, String username, String password, AuthModule authModule)
   {
     this.url = url;
     this.username = username;
     this.password = password;
+    this.authModule = authModule;
   }
 
   public void SetProxy(Proxy proxy)
@@ -47,5 +49,10 @@ public class ClientConfig
   public String getPassword()
   {
     return password;
+  }
+
+  public AuthModule getAuthModule()
+  {
+    return authModule;
   }
 }
