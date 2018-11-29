@@ -53,7 +53,7 @@ public class SaltClient
     String proxyPort = GetSystemProperty("proxyport", true);
     String proxyUser = GetSystemProperty("proxuser", true);
     String proxyPassword = GetSystemProperty("proxypassword", true);
-    if (proxyHost == null)
+    if (proxyHost != null)
     {
       Proxy proxy = new Proxy(proxyHost, Integer.parseInt(proxyPort), proxyUser, proxyPassword);
       config.SetProxy(proxy);
