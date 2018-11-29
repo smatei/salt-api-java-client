@@ -1,7 +1,7 @@
 package com.smatei.salt.target;
 
 /**
- * Possible target types for the salt API client: {@link https://docs.saltstack.com/en/latest/topics/targeting/compound.html}
+ * Possible target types for the salt API client: {@linktourl https://docs.saltstack.com/en/latest/topics/targeting/compound.html}
  *
  * @author smatei
  */
