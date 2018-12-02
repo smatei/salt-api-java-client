@@ -1,138 +1,81 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "shadow.lock_password": {
     "args": [
-      "length"
+      "name"
     ]
   },
-  "test.cross_test": {
+  "shadow.set_warndays": {
     "args": [
-      "func",
-      "args"
-    ],
-    "defaults": [
-      null
+      "name",
+      "warndays"
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "shadow.set_inactdays": {
     "args": [
-      "assertion"
+      "name",
+      "inactdays"
     ]
   },
-  "test.fib": {
+  "shadow.set_password": {
     "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
-    ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "name",
+      "password",
+      "use_usermod"
     ],
     "defaults": [
       false
-    ],
-    "kwargs": true
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "shadow.set_maxdays": {
     "args": [
-      "message"
+      "name",
+      "maxdays"
+    ]
+  },
+  "shadow.set_mindays": {
+    "args": [
+      "name",
+      "mindays"
+    ]
+  },
+  "shadow.info": {
+    "args": [
+      "name"
+    ]
+  },
+  "shadow.del_password": {
+    "args": [
+      "name"
+    ]
+  },
+  "shadow.unlock_password": {
+    "args": [
+      "name"
+    ]
+  },
+  "shadow.set_date": {
+    "args": [
+      "name",
+      "date"
+    ]
+  },
+  "shadow.gen_password": {
+    "args": [
+      "password",
+      "crypt_salt",
+      "algorithm"
     ],
     "defaults": [
-      "Test Exception"
+      null,
+      "sha512"
     ]
   },
-  "test.provider": {
+  "shadow.set_expire": {
     "args": [
-      "module"
+      "name",
+      "expire"
     ]
   },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
-  }
+  "shadow.list_users": {},
+  "shadow.default_hash": {}
 }

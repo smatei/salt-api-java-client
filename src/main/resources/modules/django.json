@@ -1,138 +1,95 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "django.createsuperuser": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "settings_module",
+      "username",
+      "email",
+      "bin_env",
+      "database",
+      "pythonpath",
+      "env"
     ],
     "defaults": [
+      null,
+      null,
+      null,
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "django.command": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "settings_module",
+      "command",
+      "bin_env",
+      "pythonpath",
+      "env"
     ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
     "varargs": true,
+    "defaults": [
+      null,
+      null,
+      null
+    ],
     "kwargs": true
   },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
+  "django.syncdb": {
     "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "settings_module",
+      "bin_env",
+      "migrate",
+      "database",
+      "pythonpath",
+      "env",
+      "noinput"
     ],
     "defaults": [
-      9999999999,
+      null,
+      false,
+      null,
+      null,
+      null,
+      true
+    ]
+  },
+  "django.loaddata": {
+    "args": [
+      "settings_module",
+      "fixtures",
+      "bin_env",
+      "database",
+      "pythonpath",
+      "env"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "django.collectstatic": {
     "args": [
-      "size",
-      "hash_type"
+      "settings_module",
+      "bin_env",
+      "no_post_process",
+      "ignore",
+      "dry_run",
+      "clear",
+      "link",
+      "no_default_ignore",
+      "pythonpath",
+      "env"
     ],
     "defaults": [
-      9999999999,
+      null,
+      false,
+      null,
+      false,
+      false,
+      false,
+      false,
+      null,
       null
     ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

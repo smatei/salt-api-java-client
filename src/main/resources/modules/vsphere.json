@@ -1,137 +1,201 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
-    "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
-    ],
-    "defaults": [
-      null
-    ]
-  },
-  "test.not_loaded": {},
-  "test.assertion": {
-    "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
-    ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
+  "vsphere.update_host_password": {
     "varargs": true,
     "kwargs": true
   },
-  "test.arg_clean": {
+  "vsphere.service_start": {
     "varargs": true,
     "kwargs": true
   },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
+  "vsphere.list_resourcepools": {
     "varargs": true,
     "kwargs": true
   },
-  "test.stack": {},
-  "test.exception": {
+  "vsphere.list_diff": {
     "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
+      "list_a",
+      "list_b",
+      "key"
     ]
   },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
+  "vsphere.set_ntp_config": {
     "varargs": true,
     "kwargs": true
   },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
+  "vsphere.wraps": {
     "args": [
-      "max"
+      "wrapped",
+      "assigned",
+      "updated"
     ],
     "defaults": [
-      60
+      [
+        "__module__",
+        "__name__",
+        "__doc__"
+      ],
+      [
+        "__dict__"
+      ]
     ]
   },
-  "test.tty": {
+  "vsphere.compare_vm_configs": {
+    "args": [
+      "new_config",
+      "current_config"
+    ]
+  },
+  "vsphere.list_datastores": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.get_vsan_eligible_disks": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.upload_ssh_key": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.system_info": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.list_clusters": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.vsan_disable": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.get_host_datetime": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.list_folders": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.list_ssds": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.get_service_policy": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.vmotion_disable": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.get_ntp_config": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.get_ssh_key": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.get_service_running": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.get_proxy_type": {},
+  "vsphere.list_dvs": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.ignores_kwargs": {
+    "varargs": true
+  },
+  "vsphere.gets_service_instance_via_proxy": {
+    "args": [
+      "fn"
+    ]
+  },
+  "vsphere.supports_proxies": {
+    "varargs": true
+  },
+  "vsphere.set_service_policy": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.list_vapps": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.add_host_to_dvs": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.list_hosts": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.list_networks": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.list_datacenters": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.list_non_ssds": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.recursive_diff": {
+    "args": [
+      "past_dict",
+      "current_dict",
+      "ignore_missing_keys"
+    ],
+    "defaults": [
+      true
+    ]
+  },
+  "vsphere.list_vms": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.service_restart": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.get_vmotion_enabled": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.vsan_enable": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.update_host_datetime": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.service_stop": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.get_vm_config": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.vsan_add_disks": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.list_datastore_clusters": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.get_vsan_enabled": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "vsphere.vmotion_enable": {
     "varargs": true,
     "kwargs": true
   }

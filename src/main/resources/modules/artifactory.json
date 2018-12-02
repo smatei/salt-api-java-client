@@ -1,138 +1,98 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "artifactory.get_snapshot": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "artifactory_url",
+      "repository",
+      "group_id",
+      "artifact_id",
+      "packaging",
+      "version",
+      "snapshot_version",
+      "target_dir",
+      "target_file",
+      "classifier",
+      "username",
+      "password",
+      "use_literal_group_id"
     ],
     "defaults": [
-      null
-    ]
-  },
-  "test.not_loaded": {},
-  "test.assertion": {
-    "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
-    ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
+      null,
+      "/tmp",
+      null,
+      null,
+      null,
+      null,
       false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
     ]
   },
-  "test.provider": {
+  "artifactory.get_release": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "artifactory_url",
+      "repository",
+      "group_id",
+      "artifact_id",
+      "packaging",
+      "version",
+      "target_dir",
+      "target_file",
+      "classifier",
+      "username",
+      "password",
+      "use_literal_group_id"
     ],
     "defaults": [
-      60
+      "/tmp",
+      null,
+      null,
+      null,
+      null,
+      false
     ]
   },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
+  "artifactory.get_latest_snapshot": {
+    "args": [
+      "artifactory_url",
+      "repository",
+      "group_id",
+      "artifact_id",
+      "packaging",
+      "target_dir",
+      "target_file",
+      "classifier",
+      "username",
+      "password",
+      "use_literal_group_id"
+    ],
+    "defaults": [
+      "/tmp",
+      null,
+      null,
+      null,
+      null,
+      false
+    ]
+  },
+  "artifactory.get_latest_release": {
+    "args": [
+      "artifactory_url",
+      "repository",
+      "group_id",
+      "artifact_id",
+      "packaging",
+      "target_dir",
+      "target_file",
+      "classifier",
+      "username",
+      "password",
+      "use_literal_group_id"
+    ],
+    "defaults": [
+      "/tmp",
+      null,
+      null,
+      null,
+      null,
+      false
+    ]
   }
 }

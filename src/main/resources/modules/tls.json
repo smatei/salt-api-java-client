@@ -1,138 +1,277 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "tls.cert_base_path": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "cacert_path"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "tls.ca_exists": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "ca_name",
+      "cacert_path",
+      "ca_filename"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "tls.cert_info": {
     "args": [
-      "size",
-      "hash_type"
+      "cert_path",
+      "digest"
     ],
     "defaults": [
-      9999999999,
+      "sha256"
+    ]
+  },
+  "tls.get_ca_signed_cert": {
+    "args": [
+      "ca_name",
+      "CN",
+      "as_text",
+      "cacert_path",
+      "cert_filename"
+    ],
+    "defaults": [
+      "localhost",
+      false,
+      null,
       null
     ]
   },
-  "test.echo": {
+  "tls.get_ca_signed_key": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "ca_name",
+      "CN",
+      "as_text",
+      "cacert_path",
+      "key_filename"
     ],
     "defaults": [
+      "localhost",
+      false,
+      null,
+      null
+    ]
+  },
+  "tls.create_pkcs12": {
+    "args": [
+      "ca_name",
+      "CN",
+      "passphrase",
+      "cacert_path",
+      "replace"
+    ],
+    "defaults": [
+      "",
+      null,
       false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
     ]
   },
-  "test.provider": {
+  "tls.create_ca_signed_cert": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "ca_name",
+      "CN",
+      "days",
+      "cacert_path",
+      "ca_filename",
+      "cert_path",
+      "cert_filename",
+      "digest",
+      "cert_type",
+      "type_ext",
+      "replace"
     ],
     "defaults": [
-      60
+      365,
+      null,
+      null,
+      null,
+      null,
+      "sha256",
+      null,
+      false,
+      false
     ]
   },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
+  "tls.create_ca": {
+    "args": [
+      "ca_name",
+      "bits",
+      "days",
+      "CN",
+      "C",
+      "ST",
+      "L",
+      "O",
+      "OU",
+      "emailAddress",
+      "fixmode",
+      "cacert_path",
+      "ca_filename",
+      "digest",
+      "onlyif",
+      "unless",
+      "replace"
+    ],
+    "defaults": [
+      2048,
+      365,
+      "localhost",
+      "US",
+      "Utah",
+      "Salt Lake City",
+      "SaltStack",
+      null,
+      null,
+      false,
+      null,
+      null,
+      "sha256",
+      null,
+      null,
+      false
+    ]
+  },
+  "tls.get_extensions": {
+    "args": [
+      "cert_type"
+    ]
+  },
+  "tls.maybe_fix_ssl_version": {
+    "args": [
+      "ca_name",
+      "cacert_path",
+      "ca_filename"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "tls.create_csr": {
+    "args": [
+      "ca_name",
+      "bits",
+      "CN",
+      "C",
+      "ST",
+      "L",
+      "O",
+      "OU",
+      "emailAddress",
+      "subjectAltName",
+      "cacert_path",
+      "ca_filename",
+      "csr_path",
+      "csr_filename",
+      "digest",
+      "type_ext",
+      "cert_type",
+      "replace"
+    ],
+    "defaults": [
+      2048,
+      "localhost",
+      "US",
+      "Utah",
+      "Salt Lake City",
+      "SaltStack",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "sha256",
+      false,
+      "server",
+      false
+    ]
+  },
+  "tls.set_ca_path": {
+    "args": [
+      "cacert_path"
+    ]
+  },
+  "tls.create_self_signed_cert": {
+    "args": [
+      "tls_dir",
+      "bits",
+      "days",
+      "CN",
+      "C",
+      "ST",
+      "L",
+      "O",
+      "OU",
+      "emailAddress",
+      "cacert_path",
+      "cert_filename",
+      "digest",
+      "replace"
+    ],
+    "defaults": [
+      "tls",
+      2048,
+      365,
+      "localhost",
+      "US",
+      "Utah",
+      "Salt Lake City",
+      "SaltStack",
+      null,
+      null,
+      null,
+      null,
+      "sha256",
+      false
+    ]
+  },
+  "tls.revoke_cert": {
+    "args": [
+      "ca_name",
+      "CN",
+      "cacert_path",
+      "ca_filename",
+      "cert_path",
+      "cert_filename",
+      "crl_file"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "tls.create_empty_crl": {
+    "args": [
+      "ca_name",
+      "cacert_path",
+      "ca_filename",
+      "crl_file"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "tls.get_ca": {
+    "args": [
+      "ca_name",
+      "as_text",
+      "cacert_path"
+    ],
+    "defaults": [
+      false,
+      null
+    ]
   }
 }

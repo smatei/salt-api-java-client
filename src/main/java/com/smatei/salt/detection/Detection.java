@@ -56,8 +56,15 @@ public class Detection
     {
       logger.info("processing module " + module.getAsString());
 
-      String moduleJsonResponse = client.run(Glob.ALL, Client.LOCAL, "sys.argspec", "test");
-      JsonObject moduleJson = ParseMinionResponse(moduleJsonResponse).getAsJsonObject();
+      String moduleJsonResponse = client.run(Glob.ALL, Client.LOCAL, "sys.argspec", module.getAsString());
+      JsonElement parsedResponse = ParseMinionResponse(moduleJsonResponse);
+      if (!parsedResponse.isJsonObject())
+      {
+        logger.info("response: " + moduleJsonResponse.toString() + " cannot be saved");
+        return;
+      }
+
+      JsonObject moduleJson = parsedResponse.getAsJsonObject();
 
       logger.info(moduleJson.toString());
       try
@@ -66,7 +73,7 @@ public class Detection
       }
       catch (IOException e)
       {
-        logger.log(Level.SEVERE, "cannot save module json  file", e);
+        logger.log(Level.SEVERE, "cannot save module json file", e);
       }
     });
   }

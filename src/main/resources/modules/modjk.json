@@ -1,138 +1,171 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "modjk.bulk_activate": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "workers",
+      "lbn",
+      "profile"
     ],
     "defaults": [
-      null
+      "default"
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "modjk.worker_status": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "worker",
+      "profile"
     ],
     "defaults": [
-      42
+      "default"
     ]
   },
-  "test.collatz": {
+  "modjk.worker_disable": {
     "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "worker",
+      "lbn",
+      "profile"
     ],
     "defaults": [
-      9999999999,
-      null
+      "default"
     ]
   },
-  "test.rand_str": {
+  "modjk.recover_all": {
     "args": [
-      "size",
-      "hash_type"
+      "lbn",
+      "profile"
     ],
     "defaults": [
-      9999999999,
-      null
+      "default"
     ]
   },
-  "test.echo": {
+  "modjk.lb_edit": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "lbn",
+      "settings",
+      "profile"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
+      "default"
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "modjk.bulk_disable": {
     "args": [
-      "message"
+      "workers",
+      "lbn",
+      "profile"
     ],
     "defaults": [
-      "Test Exception"
+      "default"
     ]
   },
-  "test.provider": {
+  "modjk.workers": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "profile"
     ],
     "defaults": [
-      60
+      "default"
     ]
   },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
+  "modjk.dump_config": {
+    "args": [
+      "profile"
+    ],
+    "defaults": [
+      "default"
+    ]
+  },
+  "modjk.bulk_stop": {
+    "args": [
+      "workers",
+      "lbn",
+      "profile"
+    ],
+    "defaults": [
+      "default"
+    ]
+  },
+  "modjk.worker_activate": {
+    "args": [
+      "worker",
+      "lbn",
+      "profile"
+    ],
+    "defaults": [
+      "default"
+    ]
+  },
+  "modjk.get_running": {
+    "args": [
+      "profile"
+    ],
+    "defaults": [
+      "default"
+    ]
+  },
+  "modjk.reset_stats": {
+    "args": [
+      "lbn",
+      "profile"
+    ],
+    "defaults": [
+      "default"
+    ]
+  },
+  "modjk.list_configured_members": {
+    "args": [
+      "lbn",
+      "profile"
+    ],
+    "defaults": [
+      "default"
+    ]
+  },
+  "modjk.bulk_recover": {
+    "args": [
+      "workers",
+      "lbn",
+      "profile"
+    ],
+    "defaults": [
+      "default"
+    ]
+  },
+  "modjk.worker_edit": {
+    "args": [
+      "worker",
+      "lbn",
+      "settings",
+      "profile"
+    ],
+    "defaults": [
+      "default"
+    ]
+  },
+  "modjk.worker_recover": {
+    "args": [
+      "worker",
+      "lbn",
+      "profile"
+    ],
+    "defaults": [
+      "default"
+    ]
+  },
+  "modjk.worker_stop": {
+    "args": [
+      "worker",
+      "lbn",
+      "profile"
+    ],
+    "defaults": [
+      "default"
+    ]
+  },
+  "modjk.version": {
+    "args": [
+      "profile"
+    ],
+    "defaults": [
+      "default"
+    ]
   }
 }

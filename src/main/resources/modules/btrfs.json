@@ -1,138 +1,66 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "btrfs.delete": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "mountpoint"
     ],
-    "defaults": [
-      null
-    ]
-  },
-  "test.not_loaded": {},
-  "test.assertion": {
-    "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
-    ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
     "varargs": true,
     "kwargs": true
   },
-  "test.arg_clean": {
+  "btrfs.usage": {
+    "args": [
+      "path"
+    ]
+  },
+  "btrfs.defragment": {
+    "args": [
+      "path"
+    ]
+  },
+  "btrfs.version": {},
+  "btrfs.resize": {
+    "args": [
+      "mountpoint",
+      "size"
+    ]
+  },
+  "btrfs.mkfs": {
     "varargs": true,
     "kwargs": true
   },
-  "test.outputter": {
+  "btrfs.info": {
     "args": [
-      "data"
+      "device"
     ]
   },
-  "test.attr_call": {},
-  "test.random_hash": {
+  "btrfs.features": {},
+  "btrfs.add": {
     "args": [
-      "size",
-      "hash_type"
+      "mountpoint"
+    ],
+    "varargs": true,
+    "kwargs": true
+  },
+  "btrfs.properties": {
+    "args": [
+      "obj",
+      "type",
+      "set"
     ],
     "defaults": [
-      9999999999,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "btrfs.devices": {},
+  "btrfs.convert": {
     "args": [
-      "size",
-      "hash_type"
+      "device",
+      "permanent",
+      "keeplf"
     ],
     "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
+      false,
       false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
     ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

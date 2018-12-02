@@ -1,138 +1,74 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "telemetry.update_alarm": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "deployment_id",
+      "metric_name",
+      "data",
+      "api_key",
+      "profile"
     ],
     "defaults": [
-      null
+      null,
+      "telemetry"
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "telemetry.create_alarm": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "deployment_id",
+      "metric_name",
+      "data",
+      "api_key",
+      "profile"
     ],
     "defaults": [
-      42
+      null,
+      "telemetry"
     ]
   },
-  "test.collatz": {
+  "telemetry.get_notification_channel_id": {
     "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "notify_channel",
+      "profile"
     ],
     "defaults": [
-      9999999999,
-      null
+      "telemetry"
     ]
   },
-  "test.rand_str": {
+  "telemetry.get_alert_config": {
     "args": [
-      "size",
-      "hash_type"
+      "deployment_id",
+      "metric_name",
+      "api_key",
+      "profile"
     ],
     "defaults": [
-      9999999999,
-      null
+      null,
+      null,
+      "telemetry"
     ]
   },
-  "test.echo": {
+  "telemetry.get_alarms": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "deployment_id",
+      "profile"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
+      "telemetry"
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "telemetry.delete_alarms": {
     "args": [
-      "message"
+      "deployment_id",
+      "alert_id",
+      "metric_name",
+      "api_key",
+      "profile"
     ],
     "defaults": [
-      "Test Exception"
+      null,
+      null,
+      null,
+      "telemetry"
     ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

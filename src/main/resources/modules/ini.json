@@ -1,138 +1,64 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "ini.remove_option": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "file_name",
+      "section",
+      "option",
+      "separator"
     ],
     "defaults": [
-      null
+      "\u003d"
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "ini.remove_section": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "file_name",
+      "section",
+      "separator"
     ],
     "defaults": [
-      42
+      "\u003d"
     ]
   },
-  "test.collatz": {
+  "ini.get_ini": {
     "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "file_name",
+      "separator"
     ],
     "defaults": [
-      9999999999,
-      null
+      "\u003d"
     ]
   },
-  "test.rand_str": {
+  "ini.get_option": {
     "args": [
-      "size",
-      "hash_type"
+      "file_name",
+      "section",
+      "option",
+      "separator"
     ],
     "defaults": [
-      9999999999,
-      null
+      "\u003d"
     ]
   },
-  "test.echo": {
+  "ini.get_section": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "file_name",
+      "section",
+      "separator"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
+      "\u003d"
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "ini.set_option": {
     "args": [
-      "message"
+      "file_name",
+      "sections",
+      "separator"
     ],
     "defaults": [
-      "Test Exception"
+      null,
+      "\u003d"
     ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

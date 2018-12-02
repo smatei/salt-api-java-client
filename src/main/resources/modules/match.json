@@ -1,138 +1,110 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "match.grain_pcre": {
     "args": [
-      "length"
+      "tgt",
+      "delimiter"
+    ],
+    "defaults": [
+      ":"
     ]
   },
-  "test.cross_test": {
+  "match.grain": {
     "args": [
-      "func",
-      "args"
+      "tgt",
+      "delimiter"
+    ],
+    "defaults": [
+      ":"
+    ]
+  },
+  "match.list": {
+    "args": [
+      "tgt",
+      "minion_id"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "match.ipcidr": {
     "args": [
-      "assertion"
+      "tgt"
     ]
   },
-  "test.fib": {
+  "match.pillar": {
     "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "tgt",
+      "delimiter"
     ],
     "defaults": [
-      42
+      ":"
     ]
   },
-  "test.collatz": {
+  "match.filter_by": {
     "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "lookup",
+      "tgt_type",
+      "minion_id",
+      "expr_form",
+      "default"
     ],
     "defaults": [
-      9999999999,
+      "compound",
+      null,
+      null,
+      "default"
+    ]
+  },
+  "match.pillar_pcre": {
+    "args": [
+      "tgt",
+      "delimiter"
+    ],
+    "defaults": [
+      ":"
+    ]
+  },
+  "match.compound": {
+    "args": [
+      "tgt",
+      "minion_id"
+    ],
+    "defaults": [
       null
     ]
   },
-  "test.rand_str": {
+  "match.glob": {
     "args": [
-      "size",
-      "hash_type"
+      "tgt",
+      "minion_id"
     ],
     "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.echo": {
+  "match.pcre": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "tgt",
+      "minion_id"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
+      null
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "match.search_by": {
     "args": [
-      "message"
+      "lookup",
+      "tgt_type",
+      "minion_id"
     ],
     "defaults": [
-      "Test Exception"
+      "compound",
+      null
     ]
   },
-  "test.provider": {
+  "match.data": {
     "args": [
-      "module"
+      "tgt"
     ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

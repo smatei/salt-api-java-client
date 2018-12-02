@@ -1,138 +1,641 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "cmd.powershell": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "cmd",
+      "cwd",
+      "stdin",
+      "runas",
+      "shell",
+      "env",
+      "clean_env",
+      "template",
+      "rstrip",
+      "umask",
+      "output_encoding",
+      "output_loglevel",
+      "hide_output",
+      "timeout",
+      "reset_system_locale",
+      "ignore_retcode",
+      "saltenv",
+      "use_vt",
+      "password",
+      "depth",
+      "encode_cmd"
     ],
     "defaults": [
-      null
-    ]
-  },
-  "test.not_loaded": {},
-  "test.assertion": {
-    "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
-    ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
+      null,
+      null,
+      null,
+      "/bin/sh",
+      null,
+      false,
+      null,
+      true,
+      null,
+      null,
+      "debug",
+      false,
+      null,
+      true,
+      false,
+      "base",
+      false,
+      null,
+      null,
       false
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "cmd.run": {
     "args": [
-      "message"
+      "cmd",
+      "cwd",
+      "stdin",
+      "runas",
+      "shell",
+      "python_shell",
+      "env",
+      "clean_env",
+      "template",
+      "rstrip",
+      "umask",
+      "output_encoding",
+      "output_loglevel",
+      "log_callback",
+      "hide_output",
+      "timeout",
+      "reset_system_locale",
+      "ignore_retcode",
+      "saltenv",
+      "use_vt",
+      "bg",
+      "password",
+      "encoded_cmd",
+      "raise_err",
+      "prepend_path"
     ],
     "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
+      null,
+      null,
+      null,
+      "/bin/sh",
+      null,
+      null,
+      false,
+      null,
+      true,
+      null,
+      null,
+      "debug",
+      null,
+      false,
+      null,
+      true,
+      false,
+      "base",
+      false,
+      false,
+      null,
+      false,
+      false,
+      null
+    ],
     "kwargs": true
   },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
+  "cmd.run_chroot": {
     "args": [
-      "max"
+      "root",
+      "cmd",
+      "cwd",
+      "stdin",
+      "runas",
+      "shell",
+      "python_shell",
+      "env",
+      "clean_env",
+      "template",
+      "rstrip",
+      "umask",
+      "output_encoding",
+      "output_loglevel",
+      "log_callback",
+      "hide_output",
+      "timeout",
+      "reset_system_locale",
+      "ignore_retcode",
+      "saltenv",
+      "use_vt",
+      "bg"
     ],
     "defaults": [
-      60
+      null,
+      null,
+      null,
+      "/bin/sh",
+      true,
+      null,
+      false,
+      null,
+      true,
+      null,
+      null,
+      "quiet",
+      null,
+      false,
+      null,
+      true,
+      false,
+      "base",
+      false,
+      false
+    ],
+    "kwargs": true
+  },
+  "cmd.has_exec": {
+    "args": [
+      "cmd"
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "cmd.script": {
+    "args": [
+      "source",
+      "args",
+      "cwd",
+      "stdin",
+      "runas",
+      "shell",
+      "python_shell",
+      "env",
+      "template",
+      "umask",
+      "output_encoding",
+      "output_loglevel",
+      "log_callback",
+      "hide_output",
+      "timeout",
+      "reset_system_locale",
+      "saltenv",
+      "use_vt",
+      "bg",
+      "password"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      "/bin/sh",
+      null,
+      null,
+      null,
+      null,
+      null,
+      "debug",
+      null,
+      false,
+      null,
+      true,
+      "base",
+      false,
+      false,
+      null
+    ],
+    "kwargs": true
+  },
+  "cmd.script_retcode": {
+    "args": [
+      "source",
+      "args",
+      "cwd",
+      "stdin",
+      "runas",
+      "shell",
+      "python_shell",
+      "env",
+      "template",
+      "umask",
+      "timeout",
+      "reset_system_locale",
+      "saltenv",
+      "output_encoding",
+      "output_loglevel",
+      "log_callback",
+      "use_vt",
+      "password"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      "/bin/sh",
+      null,
+      null,
+      "jinja",
+      null,
+      null,
+      true,
+      "base",
+      null,
+      "debug",
+      null,
+      false,
+      null
+    ],
+    "kwargs": true
+  },
+  "cmd.run_stdout": {
+    "args": [
+      "cmd",
+      "cwd",
+      "stdin",
+      "runas",
+      "shell",
+      "python_shell",
+      "env",
+      "clean_env",
+      "template",
+      "rstrip",
+      "umask",
+      "output_encoding",
+      "output_loglevel",
+      "log_callback",
+      "hide_output",
+      "timeout",
+      "reset_system_locale",
+      "ignore_retcode",
+      "saltenv",
+      "use_vt",
+      "password",
+      "prepend_path"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      "/bin/sh",
+      null,
+      null,
+      false,
+      null,
+      true,
+      null,
+      null,
+      "debug",
+      null,
+      false,
+      null,
+      true,
+      false,
+      "base",
+      false,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "cmd.shells": {},
+  "cmd.shell_info": {
+    "args": [
+      "shell",
+      "list_modules"
+    ],
+    "defaults": [
+      false
+    ]
+  },
+  "cmd.retcode": {
+    "args": [
+      "cmd",
+      "cwd",
+      "stdin",
+      "runas",
+      "shell",
+      "python_shell",
+      "env",
+      "clean_env",
+      "template",
+      "umask",
+      "output_encoding",
+      "output_loglevel",
+      "log_callback",
+      "timeout",
+      "reset_system_locale",
+      "ignore_retcode",
+      "saltenv",
+      "use_vt",
+      "password"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      "/bin/sh",
+      null,
+      null,
+      false,
+      null,
+      null,
+      null,
+      "debug",
+      null,
+      null,
+      true,
+      false,
+      "base",
+      false,
+      null
+    ],
+    "kwargs": true
+  },
+  "cmd.which": {
+    "args": [
+      "cmd"
+    ]
+  },
+  "cmd.shell": {
+    "args": [
+      "cmd",
+      "cwd",
+      "stdin",
+      "runas",
+      "shell",
+      "env",
+      "clean_env",
+      "template",
+      "rstrip",
+      "umask",
+      "output_encoding",
+      "output_loglevel",
+      "log_callback",
+      "hide_output",
+      "timeout",
+      "reset_system_locale",
+      "ignore_retcode",
+      "saltenv",
+      "use_vt",
+      "bg",
+      "password",
+      "prepend_path"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      "/bin/sh",
+      null,
+      false,
+      null,
+      true,
+      null,
+      null,
+      "debug",
+      null,
+      false,
+      null,
+      true,
+      false,
+      "base",
+      false,
+      false,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "cmd.which_bin": {
+    "args": [
+      "cmds"
+    ]
+  },
+  "cmd.powershell_all": {
+    "args": [
+      "cmd",
+      "cwd",
+      "stdin",
+      "runas",
+      "shell",
+      "env",
+      "clean_env",
+      "template",
+      "rstrip",
+      "umask",
+      "output_encoding",
+      "output_loglevel",
+      "quiet",
+      "timeout",
+      "reset_system_locale",
+      "ignore_retcode",
+      "saltenv",
+      "use_vt",
+      "password",
+      "depth",
+      "encode_cmd",
+      "force_list"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      "/bin/sh",
+      null,
+      false,
+      null,
+      true,
+      null,
+      null,
+      "debug",
+      false,
+      null,
+      true,
+      false,
+      "base",
+      false,
+      null,
+      null,
+      false,
+      false
+    ],
+    "kwargs": true
+  },
+  "cmd.run_stderr": {
+    "args": [
+      "cmd",
+      "cwd",
+      "stdin",
+      "runas",
+      "shell",
+      "python_shell",
+      "env",
+      "clean_env",
+      "template",
+      "rstrip",
+      "umask",
+      "output_encoding",
+      "output_loglevel",
+      "log_callback",
+      "hide_output",
+      "timeout",
+      "reset_system_locale",
+      "ignore_retcode",
+      "saltenv",
+      "use_vt",
+      "password",
+      "prepend_path"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      "/bin/sh",
+      null,
+      null,
+      false,
+      null,
+      true,
+      null,
+      null,
+      "debug",
+      null,
+      false,
+      null,
+      true,
+      false,
+      "base",
+      false,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "cmd.run_bg": {
+    "args": [
+      "cmd",
+      "cwd",
+      "runas",
+      "shell",
+      "python_shell",
+      "env",
+      "clean_env",
+      "template",
+      "umask",
+      "timeout",
+      "output_encoding",
+      "output_loglevel",
+      "log_callback",
+      "reset_system_locale",
+      "saltenv",
+      "password",
+      "prepend_path"
+    ],
+    "defaults": [
+      null,
+      null,
+      "/bin/sh",
+      null,
+      null,
+      false,
+      null,
+      null,
+      null,
+      null,
+      "debug",
+      null,
+      true,
+      "base",
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "cmd.tty": {
+    "args": [
+      "device",
+      "echo"
+    ],
+    "defaults": [
+      ""
+    ]
+  },
+  "cmd.exec_code": {
+    "args": [
+      "lang",
+      "code",
+      "cwd",
+      "args"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "cmd.exec_code_all": {
+    "args": [
+      "lang",
+      "code",
+      "cwd",
+      "args"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "cmd.run_all": {
+    "args": [
+      "cmd",
+      "cwd",
+      "stdin",
+      "runas",
+      "shell",
+      "python_shell",
+      "env",
+      "clean_env",
+      "template",
+      "rstrip",
+      "umask",
+      "output_encoding",
+      "output_loglevel",
+      "log_callback",
+      "hide_output",
+      "timeout",
+      "reset_system_locale",
+      "ignore_retcode",
+      "saltenv",
+      "use_vt",
+      "redirect_stderr",
+      "password",
+      "encoded_cmd",
+      "prepend_path"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      "/bin/sh",
+      null,
+      null,
+      false,
+      null,
+      true,
+      null,
+      null,
+      "debug",
+      null,
+      false,
+      null,
+      true,
+      false,
+      "base",
+      false,
+      false,
+      null,
+      false,
+      null
+    ],
     "kwargs": true
   }
 }

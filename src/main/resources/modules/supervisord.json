@@ -1,138 +1,146 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "supervisord.add": {
     "args": [
-      "length"
+      "name",
+      "user",
+      "conf_file",
+      "bin_env"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
     ]
   },
-  "test.cross_test": {
+  "supervisord.options": {
     "args": [
-      "func",
-      "args"
+      "name",
+      "conf_file"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "supervisord.restart": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "name",
+      "user",
+      "conf_file",
+      "bin_env"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
+      "all",
+      null,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "supervisord.reread": {
     "args": [
-      "size",
-      "hash_type"
+      "user",
+      "conf_file",
+      "bin_env"
     ],
     "defaults": [
-      9999999999,
+      null,
+      null,
       null
     ]
   },
-  "test.echo": {
+  "supervisord.status": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "name",
+      "user",
+      "conf_file",
+      "bin_env"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
+      null,
+      null,
+      null,
+      null
     ]
   },
-  "test.provider": {
+  "supervisord.start": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "name",
+      "user",
+      "conf_file",
+      "bin_env"
     ],
     "defaults": [
-      60
+      "all",
+      null,
+      null,
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
+  "supervisord.remove": {
+    "args": [
+      "name",
+      "user",
+      "conf_file",
+      "bin_env"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "supervisord.custom": {
+    "args": [
+      "command",
+      "user",
+      "conf_file",
+      "bin_env"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "supervisord.stop": {
+    "args": [
+      "name",
+      "user",
+      "conf_file",
+      "bin_env"
+    ],
+    "defaults": [
+      "all",
+      null,
+      null,
+      null
+    ]
+  },
+  "supervisord.update": {
+    "args": [
+      "user",
+      "conf_file",
+      "bin_env",
+      "name"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "supervisord.status_raw": {
+    "args": [
+      "name",
+      "user",
+      "conf_file",
+      "bin_env"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null
+    ]
   }
 }

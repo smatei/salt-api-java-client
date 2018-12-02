@@ -1,138 +1,108 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "nexus.get_snapshot_version_string": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "nexus_url",
+      "repository",
+      "group_id",
+      "artifact_id",
+      "packaging",
+      "version",
+      "classifier",
+      "username",
+      "password"
     ],
     "defaults": [
+      null,
+      null,
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "nexus.get_release": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "nexus_url",
+      "repository",
+      "group_id",
+      "artifact_id",
+      "packaging",
+      "version",
+      "target_dir",
+      "target_file",
+      "classifier",
+      "username",
+      "password"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
+      "/tmp",
+      null,
+      null,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "nexus.get_snapshot": {
     "args": [
-      "size",
-      "hash_type"
+      "nexus_url",
+      "repository",
+      "group_id",
+      "artifact_id",
+      "packaging",
+      "version",
+      "snapshot_version",
+      "target_dir",
+      "target_file",
+      "classifier",
+      "username",
+      "password"
     ],
     "defaults": [
-      9999999999,
+      null,
+      "/tmp",
+      null,
+      null,
+      null,
       null
     ]
   },
-  "test.echo": {
+  "nexus.get_latest_release": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "nexus_url",
+      "repository",
+      "group_id",
+      "artifact_id",
+      "packaging",
+      "target_dir",
+      "target_file",
+      "classifier",
+      "username",
+      "password"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
+      "/tmp",
+      null,
+      null,
+      null,
+      null
     ]
   },
-  "test.provider": {
+  "nexus.get_latest_snapshot": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "nexus_url",
+      "repository",
+      "group_id",
+      "artifact_id",
+      "packaging",
+      "target_dir",
+      "target_file",
+      "classifier",
+      "username",
+      "password"
     ],
     "defaults": [
-      60
+      "/tmp",
+      null,
+      null,
+      null,
+      null
     ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

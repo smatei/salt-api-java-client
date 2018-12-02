@@ -1,138 +1,143 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "ps.disk_usage": {
     "args": [
-      "length"
+      "path"
     ]
   },
-  "test.cross_test": {
+  "ps.ss": {
     "args": [
-      "func",
-      "args"
+      "name"
+    ]
+  },
+  "ps.num_cpus": {},
+  "ps.proc_info": {
+    "args": [
+      "pid",
+      "attrs"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "ps.total_physical_memory": {},
+  "ps.cpu_percent": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "interval",
+      "per_cpu"
     ],
     "defaults": [
-      42
+      0.1,
+      false
     ]
   },
-  "test.collatz": {
+  "ps.top": {
     "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "num_processes",
+      "interval"
     ],
     "defaults": [
-      9999999999,
+      5,
+      3
+    ]
+  },
+  "ps.kill_pid": {
+    "args": [
+      "pid",
+      "signal"
+    ],
+    "defaults": [
+      15
+    ]
+  },
+  "ps.boot_time": {
+    "args": [
+      "time_format"
+    ],
+    "defaults": [
       null
     ]
   },
-  "test.rand_str": {
+  "ps.disk_partition_usage": {
     "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "all"
     ],
     "defaults": [
       false
-    ],
-    "kwargs": true
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "ps.get_pid_list": {},
+  "ps.cpu_times": {
     "args": [
-      "message"
+      "per_cpu"
     ],
     "defaults": [
-      "Test Exception"
+      false
     ]
   },
-  "test.provider": {
+  "ps.netstat": {
     "args": [
-      "module"
+      "name"
     ]
   },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
+  "ps.psaux": {
     "args": [
-      "max"
+      "name"
+    ]
+  },
+  "ps.network_io_counters": {
+    "args": [
+      "interface"
     ],
     "defaults": [
-      60
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
+  "ps.lsof": {
+    "args": [
+      "name"
+    ]
+  },
+  "ps.swap_memory": {},
+  "ps.get_users": {},
+  "ps.virtual_memory": {},
+  "ps.pgrep": {
+    "args": [
+      "pattern",
+      "user",
+      "full"
+    ],
+    "defaults": [
+      null,
+      false
+    ]
+  },
+  "ps.disk_partitions": {
+    "args": [
+      "all"
+    ],
+    "defaults": [
+      false
+    ]
+  },
+  "ps.pkill": {
+    "args": [
+      "pattern",
+      "user",
+      "signal",
+      "full"
+    ],
+    "defaults": [
+      null,
+      15,
+      false
+    ]
+  },
+  "ps.disk_io_counters": {
+    "args": [
+      "device"
+    ],
+    "defaults": [
+      null
+    ]
   }
 }

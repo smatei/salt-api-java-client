@@ -1,138 +1,180 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "archive.gunzip": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "gzipfile",
+      "template",
+      "runas",
+      "options"
     ],
     "defaults": [
+      null,
+      null,
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "archive.list": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "name",
+      "archive_format",
+      "options",
+      "strip_components",
+      "clean",
+      "verbose",
+      "saltenv",
+      "source_hash"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
+      null,
+      null,
+      null,
+      false,
+      false,
+      "base",
       null
     ]
   },
-  "test.rand_str": {
+  "archive.cmd_unzip": {
     "args": [
-      "size",
-      "hash_type"
+      "zip_file",
+      "dest",
+      "excludes",
+      "options",
+      "template",
+      "runas",
+      "trim_output",
+      "password"
     ],
     "defaults": [
-      9999999999,
+      null,
+      null,
+      null,
+      null,
+      false,
       null
     ]
   },
-  "test.echo": {
+  "archive.unzip": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "zip_file",
+      "dest",
+      "excludes",
+      "options",
+      "template",
+      "runas",
+      "trim_output",
+      "password",
+      "extract_perms"
     ],
     "defaults": [
+      null,
+      null,
+      null,
+      null,
+      false,
+      null,
+      true
+    ]
+  },
+  "archive.tar": {
+    "args": [
+      "options",
+      "tarfile",
+      "sources",
+      "dest",
+      "cwd",
+      "template",
+      "runas"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "archive.gzip": {
+    "args": [
+      "sourcefile",
+      "template",
+      "runas",
+      "options"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "archive.cmd_zip": {
+    "args": [
+      "zip_file",
+      "sources",
+      "template",
+      "cwd",
+      "runas"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "archive.zip": {
+    "args": [
+      "zip_file",
+      "sources",
+      "template",
+      "cwd",
+      "runas"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "archive.unrar": {
+    "args": [
+      "rarfile",
+      "dest",
+      "excludes",
+      "template",
+      "runas",
+      "trim_output"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
       false
-    ],
-    "kwargs": true
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "archive.rar": {
     "args": [
-      "message"
+      "rarfile",
+      "sources",
+      "template",
+      "cwd",
+      "runas"
     ],
     "defaults": [
-      "Test Exception"
+      null,
+      null,
+      null
     ]
   },
-  "test.provider": {
+  "archive.is_encrypted": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "name",
+      "clean",
+      "saltenv",
+      "source_hash"
     ],
     "defaults": [
-      60
+      false,
+      "base",
+      null
     ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

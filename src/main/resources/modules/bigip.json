@@ -1,138 +1,569 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "bigip.commit_transaction": {
     "args": [
-      "length"
+      "hostname",
+      "username",
+      "password",
+      "label"
     ]
   },
-  "test.cross_test": {
+  "bigip.modify_virtual": {
     "args": [
-      "func",
-      "args"
+      "hostname",
+      "username",
+      "password",
+      "name",
+      "destination",
+      "pool",
+      "address_status",
+      "auto_lasthop",
+      "bwc_policy",
+      "cmp_enabled",
+      "connection_limit",
+      "dhcp_relay",
+      "description",
+      "fallback_persistence",
+      "flow_eviction_policy",
+      "gtm_score",
+      "ip_forward",
+      "ip_protocol",
+      "internal",
+      "twelve_forward",
+      "last_hop_pool",
+      "mask",
+      "mirror",
+      "nat64",
+      "persist",
+      "profiles",
+      "policies",
+      "rate_class",
+      "rate_limit",
+      "rate_limit_mode",
+      "rate_limit_dst",
+      "rate_limit_src",
+      "rules",
+      "related_rules",
+      "reject",
+      "source",
+      "source_address_translation",
+      "source_port",
+      "state",
+      "traffic_classes",
+      "translate_address",
+      "translate_port",
+      "vlans"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "bigip.add_pool_member": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "name",
+      "member"
+    ]
+  },
+  "bigip.modify_monitor": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "monitor_type",
+      "name"
+    ],
+    "kwargs": true
+  },
+  "bigip.modify_pool": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "name",
+      "allow_nat",
+      "allow_snat",
+      "description",
+      "gateway_failsafe_device",
+      "ignore_persisted_weight",
+      "ip_tos_to_client",
+      "ip_tos_to_server",
+      "link_qos_to_client",
+      "link_qos_to_server",
+      "load_balancing_mode",
+      "min_active_members",
+      "min_up_members",
+      "min_up_members_action",
+      "min_up_members_checking",
+      "monitor",
+      "profiles",
+      "queue_depth_limit",
+      "queue_on_connection_limit",
+      "queue_time_limit",
+      "reselect_tries",
+      "service_down_action",
+      "slow_ramp_time"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "bigip.delete_pool_member": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "name",
+      "member"
+    ]
+  },
+  "bigip.start_transaction": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "label"
+    ]
+  },
+  "bigip.list_virtual": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "name"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "bigip.list_pool": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "hostname",
+      "username",
+      "password",
+      "name"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.rand_str": {
+  "bigip.create_profile": {
     "args": [
-      "size",
-      "hash_type"
+      "hostname",
+      "username",
+      "password",
+      "profile_type",
+      "name"
+    ],
+    "kwargs": true
+  },
+  "bigip.modify_pool_member": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "name",
+      "member",
+      "connection_limit",
+      "description",
+      "dynamic_ratio",
+      "inherit_profile",
+      "logging",
+      "monitor",
+      "priority_group",
+      "profiles",
+      "rate_limit",
+      "ratio",
+      "session",
+      "state"
     ],
     "defaults": [
-      9999999999,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
       null
     ]
   },
-  "test.echo": {
+  "bigip.delete_pool": {
     "args": [
-      "text"
+      "hostname",
+      "username",
+      "password",
+      "name"
     ]
   },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
+  "bigip.create_virtual": {
     "args": [
-      "module",
-      "return_try_exception"
+      "hostname",
+      "username",
+      "password",
+      "name",
+      "destination",
+      "pool",
+      "address_status",
+      "auto_lasthop",
+      "bwc_policy",
+      "cmp_enabled",
+      "connection_limit",
+      "dhcp_relay",
+      "description",
+      "fallback_persistence",
+      "flow_eviction_policy",
+      "gtm_score",
+      "ip_forward",
+      "ip_protocol",
+      "internal",
+      "twelve_forward",
+      "last_hop_pool",
+      "mask",
+      "mirror",
+      "nat64",
+      "persist",
+      "profiles",
+      "policies",
+      "rate_class",
+      "rate_limit",
+      "rate_limit_mode",
+      "rate_limit_dst",
+      "rate_limit_src",
+      "rules",
+      "related_rules",
+      "reject",
+      "source",
+      "source_address_translation",
+      "source_port",
+      "state",
+      "traffic_classes",
+      "translate_address",
+      "translate_port",
+      "vlans"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "bigip.list_profile": {
     "args": [
-      "message"
+      "hostname",
+      "username",
+      "password",
+      "profile_type",
+      "name"
     ],
     "defaults": [
-      "Test Exception"
+      null
     ]
   },
-  "test.provider": {
+  "bigip.list_node": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "hostname",
+      "username",
+      "password",
+      "name",
+      "trans_label"
     ],
     "defaults": [
-      60
+      null,
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "bigip.delete_monitor": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "monitor_type",
+      "name"
+    ]
+  },
+  "bigip.delete_profile": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "profile_type",
+      "name"
+    ]
+  },
+  "bigip.create_node": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "name",
+      "address",
+      "trans_label"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "bigip.modify_profile": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "profile_type",
+      "name"
+    ],
     "kwargs": true
+  },
+  "bigip.list_monitor": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "monitor_type",
+      "name"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "bigip.delete_node": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "name",
+      "trans_label"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "bigip.create_monitor": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "monitor_type",
+      "name"
+    ],
+    "kwargs": true
+  },
+  "bigip.modify_node": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "name",
+      "connection_limit",
+      "description",
+      "dynamic_ratio",
+      "logging",
+      "monitor",
+      "rate_limit",
+      "ratio",
+      "session",
+      "state",
+      "trans_label"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "bigip.create_pool": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "name",
+      "members",
+      "allow_nat",
+      "allow_snat",
+      "description",
+      "gateway_failsafe_device",
+      "ignore_persisted_weight",
+      "ip_tos_to_client",
+      "ip_tos_to_server",
+      "link_qos_to_client",
+      "link_qos_to_server",
+      "load_balancing_mode",
+      "min_active_members",
+      "min_up_members",
+      "min_up_members_action",
+      "min_up_members_checking",
+      "monitor",
+      "profiles",
+      "queue_depth_limit",
+      "queue_on_connection_limit",
+      "queue_time_limit",
+      "reselect_tries",
+      "service_down_action",
+      "slow_ramp_time"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "bigip.delete_transaction": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "label"
+    ]
+  },
+  "bigip.delete_virtual": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "name"
+    ]
+  },
+  "bigip.list_transaction": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "label"
+    ]
+  },
+  "bigip.replace_pool_members": {
+    "args": [
+      "hostname",
+      "username",
+      "password",
+      "name",
+      "members"
+    ]
   }
 }

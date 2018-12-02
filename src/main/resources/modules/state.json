@@ -1,138 +1,316 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "state.disable": {
     "args": [
-      "length"
+      "states"
     ]
   },
-  "test.cross_test": {
+  "state.top": {
     "args": [
-      "func",
-      "args"
+      "topfn",
+      "test",
+      "queue"
+    ],
+    "defaults": [
+      null,
+      false
+    ],
+    "kwargs": true
+  },
+  "state.get_pauses": {
+    "args": [
+      "jid"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "state.show_low_sls": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "mods",
+      "test",
+      "queue"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
+      null,
+      false
+    ],
     "kwargs": true
   },
-  "test.arg_clean": {
-    "varargs": true,
+  "state.apply": {
+    "args": [
+      "mods"
+    ],
+    "defaults": [
+      null
+    ],
     "kwargs": true
   },
-  "test.outputter": {
+  "state.highstate": {
     "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "test",
+      "queue"
     ],
     "defaults": [
-      9999999999,
-      null
-    ]
+      null,
+      false
+    ],
+    "kwargs": true
   },
-  "test.rand_str": {
+  "state.sls_id": {
     "args": [
-      "size",
-      "hash_type"
+      "id_",
+      "mods",
+      "test",
+      "queue"
     ],
     "defaults": [
-      9999999999,
-      null
-    ]
+      null,
+      false
+    ],
+    "kwargs": true
   },
-  "test.echo": {
+  "state.template_str": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "tem",
+      "queue"
     ],
     "defaults": [
       false
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "state.running": {
     "args": [
-      "message"
+      "concurrent"
     ],
     "defaults": [
-      "Test Exception"
+      false
     ]
   },
-  "test.provider": {
+  "state.low": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "data",
+      "queue"
     ],
     "defaults": [
-      60
+      false
+    ],
+    "kwargs": true
+  },
+  "state.show_state_usage": {
+    "args": [
+      "queue"
+    ],
+    "defaults": [
+      false
+    ],
+    "kwargs": true
+  },
+  "state.single": {
+    "args": [
+      "fun",
+      "name",
+      "test",
+      "queue"
+    ],
+    "defaults": [
+      null,
+      false
+    ],
+    "kwargs": true
+  },
+  "state.high": {
+    "args": [
+      "data",
+      "test",
+      "queue"
+    ],
+    "defaults": [
+      null,
+      false
+    ],
+    "kwargs": true
+  },
+  "state.enable": {
+    "args": [
+      "states"
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "state.template": {
+    "args": [
+      "tem",
+      "queue"
+    ],
+    "defaults": [
+      false
+    ],
     "kwargs": true
+  },
+  "state.sls": {
+    "args": [
+      "mods",
+      "test",
+      "exclude",
+      "queue",
+      "sync_mods"
+    ],
+    "defaults": [
+      null,
+      null,
+      false,
+      null
+    ],
+    "kwargs": true
+  },
+  "state.run_request": {
+    "args": [
+      "name"
+    ],
+    "defaults": [
+      "default"
+    ],
+    "kwargs": true
+  },
+  "state.show_top": {
+    "args": [
+      "queue"
+    ],
+    "defaults": [
+      false
+    ],
+    "kwargs": true
+  },
+  "state.pause": {
+    "args": [
+      "jid",
+      "state_id",
+      "duration"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "state.show_sls": {
+    "args": [
+      "mods",
+      "test",
+      "queue"
+    ],
+    "defaults": [
+      null,
+      false
+    ],
+    "kwargs": true
+  },
+  "state.event": {
+    "args": [
+      "tagmatch",
+      "count",
+      "quiet",
+      "sock_dir",
+      "pretty",
+      "node"
+    ],
+    "defaults": [
+      "*",
+      -1,
+      false,
+      null,
+      false,
+      "minion"
+    ]
+  },
+  "state.list_disabled": {},
+  "state.soft_kill": {
+    "args": [
+      "jid",
+      "state_id"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "state.clear_cache": {},
+  "state.show_lowstate": {
+    "args": [
+      "queue"
+    ],
+    "defaults": [
+      false
+    ],
+    "kwargs": true
+  },
+  "state.pkg": {
+    "args": [
+      "pkg_path",
+      "pkg_sum",
+      "hash_type",
+      "test"
+    ],
+    "defaults": [
+      null
+    ],
+    "kwargs": true
+  },
+  "state.resume": {
+    "args": [
+      "jid",
+      "state_id"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "state.request": {
+    "args": [
+      "mods"
+    ],
+    "defaults": [
+      null
+    ],
+    "kwargs": true
+  },
+  "state.orchestrate": {
+    "args": [
+      "mods",
+      "saltenv",
+      "test",
+      "exclude",
+      "pillar",
+      "pillarenv"
+    ],
+    "defaults": [
+      "base",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "state.check_request": {
+    "args": [
+      "name"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "state.show_highstate": {
+    "args": [
+      "queue"
+    ],
+    "defaults": [
+      false
+    ],
+    "kwargs": true
+  },
+  "state.clear_request": {
+    "args": [
+      "name"
+    ],
+    "defaults": [
+      null
+    ]
   }
 }

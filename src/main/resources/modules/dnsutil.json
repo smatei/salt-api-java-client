@@ -1,138 +1,110 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "dnsutil.hosts_remove": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "hostsfile",
+      "entries"
     ],
     "defaults": [
+      "/etc/hosts",
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "dnsutil.MX": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "domain",
+      "resolve",
+      "nameserver"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
+      false,
       null
     ]
   },
-  "test.rand_str": {
+  "dnsutil.SPF": {
     "args": [
-      "size",
-      "hash_type"
+      "domain",
+      "record",
+      "nameserver"
     ],
     "defaults": [
-      9999999999,
+      "SPF",
       null
     ]
   },
-  "test.echo": {
+  "dnsutil.check_ip": {
     "args": [
-      "text"
+      "ip_addr"
     ]
   },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
+  "dnsutil.NS": {
     "args": [
-      "module",
-      "return_try_exception"
+      "domain",
+      "resolve",
+      "nameserver"
     ],
     "defaults": [
+      true,
+      null
+    ]
+  },
+  "dnsutil.serial": {
+    "args": [
+      "zone",
+      "update"
+    ],
+    "defaults": [
+      "",
       false
-    ],
-    "kwargs": true
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "dnsutil.parse_hosts": {
     "args": [
-      "message"
+      "hostsfile",
+      "hosts"
     ],
     "defaults": [
-      "Test Exception"
+      "/etc/hosts",
+      null
     ]
   },
-  "test.provider": {
+  "dnsutil.hosts_append": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "hostsfile",
+      "ip_addr",
+      "entries"
     ],
     "defaults": [
-      60
+      "/etc/hosts",
+      null,
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
+  "dnsutil.A": {
+    "args": [
+      "host",
+      "nameserver"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "dnsutil.AAAA": {
+    "args": [
+      "host",
+      "nameserver"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "dnsutil.parse_zone": {
+    "args": [
+      "zonefile",
+      "zone"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
   }
 }

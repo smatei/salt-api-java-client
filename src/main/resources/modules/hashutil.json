@@ -1,138 +1,80 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "hashutil.base64_b64encode": {
     "args": [
-      "length"
+      "instr"
     ]
   },
-  "test.cross_test": {
+  "hashutil.digest_file": {
     "args": [
-      "func",
-      "args"
+      "infile",
+      "checksum"
     ],
     "defaults": [
-      null
+      "md5"
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "hashutil.github_signature": {
     "args": [
-      "assertion"
+      "string",
+      "shared_secret",
+      "challenge_hmac"
     ]
   },
-  "test.fib": {
+  "hashutil.base64_encodestring": {
     "args": [
-      "num"
+      "instr"
     ]
   },
-  "test.versions": {},
-  "test.retcode": {
+  "hashutil.sha256_digest": {
     "args": [
-      "code"
+      "instr"
+    ]
+  },
+  "hashutil.base64_decodestring": {
+    "args": [
+      "instr"
+    ]
+  },
+  "hashutil.digest": {
+    "args": [
+      "instr",
+      "checksum"
     ],
     "defaults": [
-      42
+      "md5"
     ]
   },
-  "test.collatz": {
+  "hashutil.base64_encodefile": {
     "args": [
-      "start"
+      "fname"
     ]
   },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
+  "hashutil.md5_digest": {
     "args": [
-      "data"
+      "instr"
     ]
   },
-  "test.attr_call": {},
-  "test.random_hash": {
+  "hashutil.hmac_signature": {
     "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
+      "string",
+      "shared_secret",
+      "challenge_hmac"
     ]
   },
-  "test.rand_str": {
+  "hashutil.base64_b64decode": {
     "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
+      "instr"
     ]
   },
-  "test.echo": {
+  "hashutil.base64_decodefile": {
     "args": [
-      "text"
+      "instr",
+      "outfile"
     ]
   },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
+  "hashutil.sha512_digest": {
     "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
+      "instr"
     ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

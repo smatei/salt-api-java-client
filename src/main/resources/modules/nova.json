@@ -1,138 +1,300 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "nova.volume_list": {
     "args": [
-      "length"
+      "search_opts",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      null
     ]
   },
-  "test.cross_test": {
+  "nova.server_show": {
     "args": [
-      "func",
-      "args"
+      "server_id",
+      "profile"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "nova.keypair_list": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "profile"
     ],
     "defaults": [
-      42
+      null
     ]
   },
-  "test.collatz": {
+  "nova.volume_detach": {
     "args": [
-      "start"
+      "name",
+      "profile",
+      "timeout"
+    ],
+    "defaults": [
+      null,
+      300
     ]
   },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
+  "nova.secgroup_create": {
     "args": [
-      "data"
+      "name",
+      "description",
+      "profile"
+    ],
+    "defaults": [
+      null
     ]
   },
-  "test.attr_call": {},
-  "test.random_hash": {
+  "nova.keypair_add": {
     "args": [
+      "name",
+      "pubfile",
+      "pubkey",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "nova.secgroup_list": {
+    "args": [
+      "profile"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "nova.volume_create": {
+    "args": [
+      "name",
       "size",
-      "hash_type"
+      "snapshot",
+      "voltype",
+      "profile"
     ],
     "defaults": [
-      9999999999,
+      100,
+      null,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "nova.show": {
     "args": [
-      "size",
-      "hash_type"
+      "server_id",
+      "profile"
     ],
     "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.echo": {
+  "nova.keypair_delete": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "name",
+      "profile"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
+      null
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "nova.flavor_delete": {
     "args": [
-      "message"
+      "flavor_id",
+      "profile"
     ],
     "defaults": [
-      "Test Exception"
+      null
     ]
   },
-  "test.provider": {
+  "nova.server_list_detailed": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "profile"
     ],
     "defaults": [
-      60
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "nova.server_list": {
+    "args": [
+      "profile"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "nova.secgroup_delete": {
+    "args": [
+      "name",
+      "profile"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "nova.image_meta_set": {
+    "args": [
+      "image_id",
+      "name",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
     "kwargs": true
+  },
+  "nova.suspend": {
+    "args": [
+      "instance_id",
+      "profile"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "nova.image_list": {
+    "args": [
+      "name",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "nova.resume": {
+    "args": [
+      "instance_id",
+      "profile"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "nova.volume_show": {
+    "args": [
+      "name",
+      "profile"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "nova.lock": {
+    "args": [
+      "instance_id",
+      "profile"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "nova.flavor_create": {
+    "args": [
+      "name",
+      "flavor_id",
+      "ram",
+      "disk",
+      "vcpus",
+      "profile"
+    ],
+    "defaults": [
+      0,
+      0,
+      0,
+      1,
+      null
+    ]
+  },
+  "nova.flavor_list": {
+    "args": [
+      "profile"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "nova.delete": {
+    "args": [
+      "instance_id",
+      "profile"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "nova.boot": {
+    "args": [
+      "name",
+      "flavor_id",
+      "image_id",
+      "profile",
+      "timeout"
+    ],
+    "defaults": [
+      0,
+      0,
+      null,
+      300
+    ]
+  },
+  "nova.image_meta_delete": {
+    "args": [
+      "image_id",
+      "name",
+      "keys",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "nova.server_by_name": {
+    "args": [
+      "name",
+      "profile"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "nova.list": {
+    "args": [
+      "profile"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "nova.volume_attach": {
+    "args": [
+      "name",
+      "server_name",
+      "device",
+      "profile",
+      "timeout"
+    ],
+    "defaults": [
+      "/dev/xvdb",
+      null,
+      300
+    ]
+  },
+  "nova.volume_delete": {
+    "args": [
+      "name",
+      "profile"
+    ],
+    "defaults": [
+      null
+    ]
   }
 }

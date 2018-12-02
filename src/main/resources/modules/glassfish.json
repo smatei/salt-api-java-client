@@ -1,138 +1,286 @@
 {
-  "test.kwarg": {
+  "glassfish.update_connector_c_pool": {
+    "args": [
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ],
     "kwargs": true
   },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "glassfish.update_jdbc_resource": {
     "args": [
-      "length"
-    ]
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ],
+    "kwargs": true
   },
-  "test.cross_test": {
+  "glassfish.enum_connector_resource": {
     "args": [
-      "func",
-      "args"
+      "server"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "glassfish.delete_jdbc_resource": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "name",
+      "target",
+      "server"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
+      "server",
       null
     ]
   },
-  "test.rand_str": {
+  "glassfish.enum_connector_c_pool": {
     "args": [
-      "size",
-      "hash_type"
+      "server"
     ],
     "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.echo": {
+  "glassfish.unquote": {
     "args": [
-      "text"
+      "s"
     ]
   },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
+  "glassfish.create_admin_object_resource": {
     "args": [
-      "module",
-      "return_try_exception"
+      "name",
+      "server"
     ],
     "defaults": [
-      false
+      null
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "glassfish.create_connector_resource": {
     "args": [
-      "message"
+      "name",
+      "server"
     ],
     "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
+      null
+    ],
     "kwargs": true
   },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
+  "glassfish.create_jdbc_resource": {
     "args": [
-      "max"
+      "name",
+      "server"
     ],
     "defaults": [
-      60
+      null
+    ],
+    "kwargs": true
+  },
+  "glassfish.delete_connector_resource": {
+    "args": [
+      "name",
+      "target",
+      "server"
+    ],
+    "defaults": [
+      "server",
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "glassfish.get_connector_c_pool": {
+    "args": [
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "glassfish.create_jdbc_connection_pool": {
+    "args": [
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ],
+    "kwargs": true
+  },
+  "glassfish.enum_jdbc_connection_pool": {
+    "args": [
+      "server"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "glassfish.get_connector_resource": {
+    "args": [
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "glassfish.delete_jdbc_connection_pool": {
+    "args": [
+      "name",
+      "target",
+      "cascade",
+      "server"
+    ],
+    "defaults": [
+      "server",
+      false,
+      null
+    ]
+  },
+  "glassfish.get_admin_object_resource": {
+    "args": [
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "glassfish.delete_system_properties": {
+    "args": [
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "glassfish.get_jdbc_resource": {
+    "args": [
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "glassfish.quote": {
+    "args": [
+      "s",
+      "safe"
+    ],
+    "defaults": [
+      "/"
+    ]
+  },
+  "glassfish.update_admin_object_resource": {
+    "args": [
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ],
+    "kwargs": true
+  },
+  "glassfish.delete_admin_object_resource": {
+    "args": [
+      "name",
+      "target",
+      "server"
+    ],
+    "defaults": [
+      "server",
+      null
+    ]
+  },
+  "glassfish.enum_jdbc_resource": {
+    "args": [
+      "server"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "glassfish.get_system_properties": {
+    "args": [
+      "server"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "glassfish.update_jdbc_connection_pool": {
+    "args": [
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ],
+    "kwargs": true
+  },
+  "glassfish.update_connector_resource": {
+    "args": [
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ],
+    "kwargs": true
+  },
+  "glassfish.get_jdbc_connection_pool": {
+    "args": [
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "glassfish.update_system_properties": {
+    "args": [
+      "data",
+      "server"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "glassfish.enum_admin_object_resource": {
+    "args": [
+      "server"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "glassfish.delete_connector_c_pool": {
+    "args": [
+      "name",
+      "target",
+      "cascade",
+      "server"
+    ],
+    "defaults": [
+      "server",
+      true,
+      null
+    ]
+  },
+  "glassfish.create_connector_c_pool": {
+    "args": [
+      "name",
+      "server"
+    ],
+    "defaults": [
+      null
+    ],
     "kwargs": true
   }
 }

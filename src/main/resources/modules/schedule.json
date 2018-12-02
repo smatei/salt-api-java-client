@@ -1,138 +1,114 @@
 {
-  "test.kwarg": {
+  "schedule.postpone_job": {
+    "args": [
+      "name",
+      "current_time",
+      "new_time"
+    ],
     "kwargs": true
   },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "schedule.build_schedule_item": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "name"
     ],
-    "defaults": [
-      null
-    ]
-  },
-  "test.not_loaded": {},
-  "test.assertion": {
-    "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
-    ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
     "kwargs": true
   },
-  "test.arg_clean": {
-    "varargs": true,
+  "schedule.enable": {
     "kwargs": true
   },
-  "test.outputter": {
+  "schedule.delete": {
     "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "name"
     ],
-    "defaults": [
-      9999999999,
-      null
+    "kwargs": true
+  },
+  "schedule.is_enabled": {
+    "args": [
+      "name"
     ]
   },
-  "test.rand_str": {
+  "schedule.run_job": {
     "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "name",
+      "force"
     ],
     "defaults": [
       false
+    ]
+  },
+  "schedule.enable_job": {
+    "args": [
+      "name"
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
+  "schedule.disable_job": {
+    "args": [
+      "name"
+    ],
     "kwargs": true
   },
-  "test.stack": {},
-  "test.exception": {
+  "schedule.disable": {
+    "kwargs": true
+  },
+  "schedule.modify": {
     "args": [
-      "message"
+      "name"
+    ],
+    "kwargs": true
+  },
+  "schedule.move": {
+    "args": [
+      "name",
+      "target"
+    ],
+    "kwargs": true
+  },
+  "schedule.purge": {
+    "kwargs": true
+  },
+  "schedule.skip_job": {
+    "args": [
+      "name",
+      "current_time"
+    ],
+    "kwargs": true
+  },
+  "schedule.save": {
+    "kwargs": true
+  },
+  "schedule.list": {
+    "args": [
+      "show_all",
+      "show_disabled",
+      "where",
+      "return_yaml"
     ],
     "defaults": [
-      "Test Exception"
+      false,
+      true,
+      null,
+      true
     ]
   },
-  "test.provider": {
+  "schedule.reload": {},
+  "schedule.add": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
+      "name"
+    ],
     "kwargs": true
   },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
+  "schedule.copy": {
     "args": [
-      "max"
+      "name",
+      "target"
     ],
-    "defaults": [
-      60
-    ]
+    "kwargs": true
   },
-  "test.tty": {
-    "varargs": true,
+  "schedule.show_next_fire_time": {
+    "args": [
+      "name"
+    ],
     "kwargs": true
   }
 }

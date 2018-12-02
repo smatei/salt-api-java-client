@@ -1,138 +1,197 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "gpg.delete_key": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "keyid",
+      "fingerprint",
+      "delete_secret",
+      "user",
+      "gnupghome"
     ],
     "defaults": [
+      null,
+      null,
+      false,
+      null,
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "gpg.list_keys": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "user",
+      "gnupghome"
     ],
     "defaults": [
-      42
+      null,
+      null
     ]
   },
-  "test.collatz": {
+  "gpg.get_key": {
     "args": [
-      "start"
+      "keyid",
+      "fingerprint",
+      "user",
+      "gnupghome"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null
     ]
   },
-  "test.ping": {},
-  "test.arg_type": {
+  "gpg.trust_key": {
+    "args": [
+      "keyid",
+      "fingerprint",
+      "trust_level",
+      "user"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "gpg.create_key": {
     "varargs": true,
     "kwargs": true
   },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
+  "gpg.encrypt": {
     "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "user",
+      "recipients",
+      "text",
+      "filename",
+      "output",
+      "sign",
+      "use_passphrase",
+      "gnupghome",
+      "bare"
     ],
     "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      false,
+      null,
       false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
     ]
   },
-  "test.provider": {
+  "gpg.decrypt": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "user",
+      "text",
+      "filename",
+      "output",
+      "use_passphrase",
+      "gnupghome",
+      "bare"
     ],
     "defaults": [
-      60
+      null,
+      null,
+      null,
+      null,
+      false,
+      null,
+      false
     ]
   },
-  "test.tty": {
+  "gpg.sign": {
+    "args": [
+      "user",
+      "keyid",
+      "text",
+      "filename",
+      "output",
+      "use_passphrase",
+      "gnupghome"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "gpg.export_key": {
+    "args": [
+      "keyids",
+      "secret",
+      "user",
+      "gnupghome"
+    ],
+    "defaults": [
+      null,
+      false,
+      null,
+      null
+    ]
+  },
+  "gpg.get_secret_key": {
+    "args": [
+      "keyid",
+      "fingerprint",
+      "user",
+      "gnupghome"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "gpg.receive_keys": {
     "varargs": true,
     "kwargs": true
+  },
+  "gpg.list_secret_keys": {
+    "args": [
+      "user",
+      "gnupghome"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "gpg.search_keys": {
+    "args": [
+      "text",
+      "keyserver",
+      "user"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "gpg.import_key": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "gpg.verify": {
+    "args": [
+      "text",
+      "user",
+      "filename",
+      "gnupghome",
+      "signature"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   }
 }

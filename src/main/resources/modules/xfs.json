@@ -1,138 +1,78 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "xfs.estimate": {
     "args": [
-      "length"
+      "path"
     ]
   },
-  "test.cross_test": {
+  "xfs.dump": {
     "args": [
-      "func",
-      "args"
+      "device",
+      "destination",
+      "level",
+      "label",
+      "noerase"
     ],
     "defaults": [
+      0,
+      null,
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "xfs.devices": {},
+  "xfs.modify": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "device",
+      "label",
+      "lazy_counting",
+      "uuid"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
+      null,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "xfs.info": {
     "args": [
-      "size",
-      "hash_type"
+      "device"
+    ]
+  },
+  "xfs.inventory": {},
+  "xfs.mkfs": {
+    "args": [
+      "device",
+      "label",
+      "ssize",
+      "noforce",
+      "bso",
+      "gmo",
+      "ino",
+      "lso",
+      "rso",
+      "nmo",
+      "dso"
     ],
     "defaults": [
-      9999999999,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
       null
     ]
   },
-  "test.echo": {
+  "xfs.defragment": {
     "args": [
-      "text"
+      "device"
     ]
   },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
+  "xfs.prune_dump": {
     "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
+      "sessionid"
     ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

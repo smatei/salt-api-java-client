@@ -1,138 +1,85 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "genesis.mksls": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "fmt",
+      "src",
+      "dst"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "genesis.avail_platforms": {},
+  "genesis.ldd_deps": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "filename",
+      "ret"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.rand_str": {
+  "genesis.bootstrap": {
     "args": [
-      "size",
-      "hash_type"
+      "platform",
+      "root",
+      "img_format",
+      "fs_format",
+      "fs_opts",
+      "arch",
+      "flavor",
+      "repo_url",
+      "static_qemu",
+      "img_size",
+      "mount_dir",
+      "pkg_cache",
+      "pkgs",
+      "exclude_pkgs",
+      "epel_url"
     ],
     "defaults": [
-      9999999999,
-      null
+      "dir",
+      "ext2",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm"
     ]
   },
-  "test.echo": {
+  "genesis.unpack": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "name",
+      "dest",
+      "path",
+      "pack_format",
+      "compress"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
+      null,
+      null,
+      "tar",
+      "bz2"
     ]
   },
-  "test.provider": {
+  "genesis.pack": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "name",
+      "root",
+      "path",
+      "pack_format",
+      "compress"
     ],
     "defaults": [
-      60
+      null,
+      "tar",
+      "bzip2"
     ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

@@ -1,138 +1,55 @@
 {
-  "test.kwarg": {
+  "slsutil.deserialize": {
+    "args": [
+      "serializer",
+      "stream_or_string"
+    ],
     "kwargs": true
   },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "slsutil.serialize": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "serializer",
+      "obj"
     ],
-    "defaults": [
-      null
-    ]
-  },
-  "test.not_loaded": {},
-  "test.assertion": {
-    "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
-    ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
     "kwargs": true
   },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
+  "slsutil.merge": {
     "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "obj_a",
+      "obj_b",
+      "strategy",
+      "renderer",
+      "merge_lists"
     ],
     "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
+      "smart",
+      "yaml",
       false
-    ],
-    "kwargs": true
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "slsutil.renderer": {
     "args": [
-      "message"
+      "path",
+      "string",
+      "default_renderer"
     ],
     "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
+      null,
+      null,
+      "jinja|yaml"
+    ],
     "kwargs": true
   },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
+  "slsutil.update": {
     "args": [
-      "max"
+      "dest",
+      "upd",
+      "recursive_update",
+      "merge_lists"
     ],
     "defaults": [
-      60
+      true,
+      false
     ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

@@ -1,138 +1,92 @@
 {
-  "test.kwarg": {
+  "solrcloud.cluster_status": {
     "kwargs": true
   },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "solrcloud.collection_creation_options": {},
+  "solrcloud.alias_set_collections": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "alias_name",
+      "collections"
     ],
     "defaults": [
       null
-    ]
-  },
-  "test.not_loaded": {},
-  "test.assertion": {
-    "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
     ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
     "kwargs": true
   },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
+  "solrcloud.collection_check_options": {
     "args": [
-      "data"
+      "options"
     ]
   },
-  "test.attr_call": {},
-  "test.random_hash": {
+  "solrcloud.alias_exists": {
     "args": [
-      "size",
-      "hash_type"
+      "alias_name"
+    ],
+    "kwargs": true
+  },
+  "solrcloud.collection_backup_all": {
+    "args": [
+      "location",
+      "backup_name"
     ],
     "defaults": [
-      9999999999,
       null
-    ]
+    ],
+    "kwargs": true
   },
-  "test.rand_str": {
+  "solrcloud.collection_create": {
     "args": [
-      "size",
-      "hash_type"
+      "collection_name",
+      "options"
     ],
     "defaults": [
-      9999999999,
       null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
-      false
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
+  "solrcloud.collection_get_options": {
+    "args": [
+      "collection_name"
+    ],
     "kwargs": true
   },
-  "test.stack": {},
-  "test.exception": {
+  "solrcloud.alias_get_collections": {
     "args": [
-      "message"
+      "alias_name"
     ],
-    "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
     "kwargs": true
   },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
+  "solrcloud.collection_list": {
+    "kwargs": true
+  },
+  "solrcloud.collection_set_options": {
     "args": [
-      "max"
+      "collection_name",
+      "options"
+    ],
+    "kwargs": true
+  },
+  "solrcloud.collection_backup": {
+    "args": [
+      "collection_name",
+      "location",
+      "backup_name"
     ],
     "defaults": [
-      60
-    ]
+      null
+    ],
+    "kwargs": true
   },
-  "test.tty": {
-    "varargs": true,
+  "solrcloud.collection_exists": {
+    "args": [
+      "collection_name"
+    ],
+    "kwargs": true
+  },
+  "solrcloud.collection_reload": {
+    "args": [
+      "collection"
+    ],
     "kwargs": true
   }
 }

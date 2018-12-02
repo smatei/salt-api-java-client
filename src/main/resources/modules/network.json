@@ -1,138 +1,219 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "network.subnets": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "interfaces"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "network.wol": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "mac",
+      "bcast",
+      "destport"
     ],
     "defaults": [
-      42
+      "255.255.255.255",
+      9
     ]
   },
-  "test.collatz": {
+  "network.calc_net": {
     "args": [
-      "start"
+      "ip_addr",
+      "netmask"
+    ],
+    "defaults": [
+      null
     ]
   },
-  "test.ping": {},
-  "test.arg_type": {
+  "network.subnets6": {},
+  "network.in_subnet": {
+    "args": [
+      "cidr"
+    ]
+  },
+  "network.convert_cidr": {
+    "args": [
+      "cidr"
+    ]
+  },
+  "network.get_hostname": {},
+  "network.ip_in_subnet": {
+    "args": [
+      "ip_addr",
+      "cidr"
+    ]
+  },
+  "network.ip_addrs": {
+    "args": [
+      "interface",
+      "include_loopback",
+      "cidr",
+      "type"
+    ],
+    "defaults": [
+      null,
+      false,
+      null,
+      null
+    ]
+  },
+  "network.traceroute": {
+    "args": [
+      "host"
+    ]
+  },
+  "network.hwaddr": {
+    "args": [
+      "iface"
+    ]
+  },
+  "network.ipaddrs6": {
+    "args": [
+      "interface",
+      "include_loopback",
+      "cidr"
+    ],
+    "defaults": [
+      null,
+      false,
+      null
+    ]
+  },
+  "network.dig": {
+    "args": [
+      "host"
+    ]
+  },
+  "network.netstat": {},
+  "network.ip_addrs6": {
+    "args": [
+      "interface",
+      "include_loopback",
+      "cidr"
+    ],
+    "defaults": [
+      null,
+      false,
+      null
+    ]
+  },
+  "network.get_fqdn": {},
+  "network.reverse_ip": {
+    "args": [
+      "ip_addr"
+    ]
+  },
+  "network.interface_ip": {
+    "args": [
+      "iface"
+    ]
+  },
+  "network.get_bufsize": {
+    "args": [
+      "iface"
+    ]
+  },
+  "network.hw_addr": {
+    "args": [
+      "iface"
+    ]
+  },
+  "network.routes": {
+    "args": [
+      "family"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "network.connect": {
+    "args": [
+      "host",
+      "port"
+    ],
+    "defaults": [
+      null
+    ],
+    "kwargs": true
+  },
+  "network.is_loopback": {
+    "args": [
+      "ip_addr"
+    ]
+  },
+  "network.interface": {
+    "args": [
+      "iface"
+    ]
+  },
+  "network.active_tcp": {},
+  "network.interfaces": {},
+  "network.get_route": {
+    "args": [
+      "ip"
+    ]
+  },
+  "network.mod_hostname": {
+    "args": [
+      "hostname"
+    ]
+  },
+  "network.arp": {},
+  "network.ifacestartswith": {
+    "args": [
+      "cidr"
+    ]
+  },
+  "network.mod_bufsize": {
+    "args": [
+      "iface"
+    ],
     "varargs": true,
     "kwargs": true
   },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
+  "network.iphexval": {
     "args": [
-      "data"
+      "ip"
     ]
   },
-  "test.attr_call": {},
-  "test.random_hash": {
+  "network.default_route": {
     "args": [
-      "size",
-      "hash_type"
+      "family"
     ],
     "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.rand_str": {
+  "network.ipaddrs": {
     "args": [
-      "size",
-      "hash_type"
+      "interface",
+      "include_loopback",
+      "cidr",
+      "type"
     ],
     "defaults": [
-      9999999999,
+      null,
+      false,
+      null,
       null
     ]
   },
-  "test.echo": {
+  "network.ping": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "host",
+      "timeout",
+      "return_boolean"
     ],
     "defaults": [
+      false,
       false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
     ]
   },
-  "test.provider": {
+  "network.is_private": {
     "args": [
-      "module"
+      "ip_addr"
     ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

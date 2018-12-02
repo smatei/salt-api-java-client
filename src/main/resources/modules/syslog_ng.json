@@ -1,138 +1,136 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "syslog_ng.config": {
     "args": [
-      "length"
+      "name",
+      "config",
+      "write"
+    ],
+    "defaults": [
+      true
     ]
   },
-  "test.cross_test": {
+  "syslog_ng.config_test": {
     "args": [
-      "func",
-      "args"
+      "syslog_ng_sbin_dir",
+      "cfgfile"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "syslog_ng.set_binary_path": {
+    "args": [
+      "name"
+    ]
+  },
+  "syslog_ng.get_config_file": {},
+  "syslog_ng.write_config": {
+    "args": [
+      "config",
+      "newlines"
+    ],
+    "defaults": [
+      2
+    ]
+  },
+  "syslog_ng.stats": {
+    "args": [
+      "syslog_ng_sbin_dir"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "syslog_ng.reload": {
     "args": [
-      "assertion"
+      "name"
     ]
   },
-  "test.fib": {
+  "syslog_ng.set_config_file": {
     "args": [
-      "num"
+      "name"
     ]
   },
-  "test.versions": {},
-  "test.retcode": {
+  "syslog_ng.version": {
     "args": [
-      "code"
+      "syslog_ng_sbin_dir"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.rand_str": {
+  "syslog_ng.write_version": {
     "args": [
-      "size",
-      "hash_type"
+      "name"
+    ]
+  },
+  "syslog_ng.modules": {
+    "args": [
+      "syslog_ng_sbin_dir"
     ],
     "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.echo": {
+  "syslog_ng.set_parameters": {
     "args": [
-      "text"
-    ]
+      "version",
+      "binary_path",
+      "config_file"
+    ],
+    "varargs": true,
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
   },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
+  "syslog_ng.start": {
     "args": [
-      "module",
-      "return_try_exception"
+      "name",
+      "user",
+      "group",
+      "chroot",
+      "caps",
+      "no_caps",
+      "pidfile",
+      "enable_core",
+      "fd_limit",
+      "verbose",
+      "debug",
+      "trace",
+      "yydebug",
+      "persist_file",
+      "control",
+      "worker_threads"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
+      null,
+      null,
+      null,
+      null,
+      null,
+      false,
+      null,
+      false,
+      null,
+      false,
+      false,
+      false,
+      false,
+      null,
+      null,
+      null
     ]
   },
-  "test.provider": {
+  "syslog_ng.stop": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "name"
     ],
     "defaults": [
-      60
+      null
     ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

@@ -1,138 +1,56 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "ip.get_bond": {
     "args": [
-      "length"
+      "iface"
     ]
   },
-  "test.cross_test": {
+  "ip.get_routes": {
     "args": [
-      "func",
-      "args"
-    ],
-    "defaults": [
-      null
+      "iface"
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "ip.build_interface": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
-    ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
-      false
+      "iface",
+      "iface_type",
+      "enabled"
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
+  "ip.down": {
+    "args": [
+      "iface",
+      "iface_type"
+    ]
+  },
+  "ip.build_bond": {
+    "args": [
+      "iface"
+    ],
     "kwargs": true
   },
-  "test.stack": {},
-  "test.exception": {
+  "ip.build_routes": {
     "args": [
-      "message"
+      "iface"
     ],
-    "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
     "kwargs": true
   },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
+  "ip.get_interface": {
     "args": [
-      "max"
-    ],
-    "defaults": [
-      60
+      "iface"
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "ip.get_network_settings": {},
+  "ip.build_network_settings": {
+    "kwargs": true
+  },
+  "ip.up": {
+    "args": [
+      "iface",
+      "iface_type"
+    ]
+  },
+  "ip.apply_network_settings": {
     "kwargs": true
   }
 }

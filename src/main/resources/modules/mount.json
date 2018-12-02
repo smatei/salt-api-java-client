@@ -1,138 +1,255 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "mount.automaster": {
     "args": [
-      "length"
+      "config"
+    ],
+    "defaults": [
+      "/etc/auto_salt"
     ]
   },
-  "test.cross_test": {
+  "mount.vfstab": {
     "args": [
-      "func",
-      "args"
+      "config"
+    ],
+    "defaults": [
+      "/etc/vfstab"
+    ]
+  },
+  "mount.swapon": {
+    "args": [
+      "name",
+      "priority"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "mount.mount": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "name",
+      "device",
+      "mkmnt",
+      "fstype",
+      "opts",
+      "user",
+      "util"
     ],
     "defaults": [
-      42
+      false,
+      "",
+      "defaults",
+      null,
+      "mount"
     ]
   },
-  "test.collatz": {
+  "mount.set_automaster": {
     "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "name",
+      "device",
+      "fstype",
+      "opts",
+      "config",
+      "test"
     ],
     "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
+      "",
+      "/etc/auto_salt",
       false
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "mount.write_mount_cache": {
     "args": [
-      "message"
+      "real_name",
+      "device",
+      "mkmnt",
+      "fstype",
+      "mount_opts"
+    ]
+  },
+  "mount.rm_vfstab": {
+    "args": [
+      "name",
+      "device",
+      "config"
     ],
     "defaults": [
-      "Test Exception"
+      "/etc/vfstab"
     ]
   },
-  "test.provider": {
+  "mount.rm_filesystems": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "name",
+      "device",
+      "config"
     ],
     "defaults": [
-      60
+      "/etc/filesystems"
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "mount.fstab": {
+    "args": [
+      "config"
+    ],
+    "defaults": [
+      "/etc/fstab"
+    ]
+  },
+  "mount.swapoff": {
+    "args": [
+      "name"
+    ]
+  },
+  "mount.umount": {
+    "args": [
+      "name",
+      "device",
+      "user",
+      "util"
+    ],
+    "defaults": [
+      null,
+      null,
+      "mount"
+    ]
+  },
+  "mount.remount": {
+    "args": [
+      "name",
+      "device",
+      "mkmnt",
+      "fstype",
+      "opts",
+      "user"
+    ],
+    "defaults": [
+      false,
+      "",
+      "defaults",
+      null
+    ]
+  },
+  "mount.rm_automaster": {
+    "args": [
+      "name",
+      "device",
+      "config"
+    ],
+    "defaults": [
+      "/etc/auto_salt"
+    ]
+  },
+  "mount.is_mounted": {
+    "args": [
+      "name"
+    ]
+  },
+  "mount.is_fuse_exec": {
+    "args": [
+      "cmd"
+    ]
+  },
+  "mount.rm_fstab": {
+    "args": [
+      "name",
+      "device",
+      "config"
+    ],
+    "defaults": [
+      "/etc/fstab"
+    ]
+  },
+  "mount.set_vfstab": {
+    "args": [
+      "name",
+      "device",
+      "fstype",
+      "opts",
+      "device_fsck",
+      "pass_fsck",
+      "mount_at_boot",
+      "config",
+      "test",
+      "match_on"
+    ],
+    "defaults": [
+      "-",
+      "-",
+      "-",
+      "yes",
+      "/etc/vfstab",
+      false,
+      "auto"
+    ],
     "kwargs": true
+  },
+  "mount.set_fstab": {
+    "args": [
+      "name",
+      "device",
+      "fstype",
+      "opts",
+      "dump",
+      "pass_num",
+      "config",
+      "test",
+      "match_on"
+    ],
+    "defaults": [
+      "defaults",
+      0,
+      0,
+      "/etc/fstab",
+      false,
+      "auto"
+    ],
+    "kwargs": true
+  },
+  "mount.active": {
+    "args": [
+      "extended"
+    ],
+    "defaults": [
+      false
+    ]
+  },
+  "mount.set_filesystems": {
+    "args": [
+      "name",
+      "device",
+      "vfstype",
+      "opts",
+      "mount",
+      "config",
+      "test",
+      "match_on"
+    ],
+    "defaults": [
+      "-",
+      "true",
+      "/etc/filesystems",
+      false,
+      "auto"
+    ],
+    "kwargs": true
+  },
+  "mount.delete_mount_cache": {
+    "args": [
+      "real_name"
+    ]
+  },
+  "mount.filesystems": {
+    "args": [
+      "config"
+    ],
+    "defaults": [
+      "/etc/filesystems"
+    ]
+  },
+  "mount.swaps": {},
+  "mount.read_mount_cache": {
+    "args": [
+      "name"
+    ]
   }
 }

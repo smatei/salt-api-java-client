@@ -1,138 +1,183 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "user.chfullname": {
     "args": [
-      "length"
+      "name",
+      "fullname"
     ]
   },
-  "test.cross_test": {
+  "user.chroomnumber": {
     "args": [
-      "func",
-      "args"
+      "name",
+      "roomnumber"
+    ]
+  },
+  "user.chother": {
+    "args": [
+      "name",
+      "other"
+    ]
+  },
+  "user.chgid": {
+    "args": [
+      "name",
+      "gid",
+      "root"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "user.chworkphone": {
     "args": [
-      "assertion"
+      "name",
+      "workphone"
     ]
   },
-  "test.fib": {
+  "user.info": {
     "args": [
-      "num"
+      "name"
     ]
   },
-  "test.versions": {},
-  "test.retcode": {
+  "user.chloginclass": {
     "args": [
-      "code"
+      "name",
+      "loginclass",
+      "root"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.rand_str": {
+  "user.list_groups": {
     "args": [
-      "size",
-      "hash_type"
+      "name"
+    ]
+  },
+  "user.chuid": {
+    "args": [
+      "name",
+      "uid"
+    ]
+  },
+  "user.chhome": {
+    "args": [
+      "name",
+      "home",
+      "persist",
+      "root"
     ],
     "defaults": [
-      9999999999,
+      false,
       null
     ]
   },
-  "test.echo": {
+  "user.chhomephone": {
     "args": [
-      "text"
+      "name",
+      "homephone"
     ]
   },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
+  "user.rename": {
     "args": [
-      "module",
-      "return_try_exception"
+      "name",
+      "new_name",
+      "root"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "user.chshell": {
+    "args": [
+      "name",
+      "shell",
+      "root"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "user.delete": {
+    "args": [
+      "name",
+      "remove",
+      "force",
+      "root"
+    ],
+    "defaults": [
+      false,
+      false,
+      null
+    ]
+  },
+  "user.get_loginclass": {
+    "args": [
+      "name"
+    ]
+  },
+  "user.getent": {
+    "args": [
+      "refresh"
     ],
     "defaults": [
       false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
     ]
   },
-  "test.provider": {
+  "user.primary_group": {
     "args": [
-      "module"
+      "name"
     ]
   },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
+  "user.chgroups": {
     "args": [
-      "max"
+      "name",
+      "groups",
+      "append",
+      "root"
     ],
     "defaults": [
-      60
+      false,
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
-  }
+  "user.add": {
+    "args": [
+      "name",
+      "uid",
+      "gid",
+      "groups",
+      "home",
+      "shell",
+      "unique",
+      "system",
+      "fullname",
+      "roomnumber",
+      "workphone",
+      "homephone",
+      "other",
+      "createhome",
+      "loginclass",
+      "root",
+      "nologinit"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      false,
+      "",
+      "",
+      "",
+      "",
+      "",
+      true,
+      null,
+      null,
+      false
+    ]
+  },
+  "user.list_users": {}
 }

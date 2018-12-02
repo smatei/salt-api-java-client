@@ -1,138 +1,54 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "incron.rm_job": {
     "args": [
-      "length"
+      "user",
+      "path",
+      "mask",
+      "cmd"
     ]
   },
-  "test.cross_test": {
+  "incron.raw_incron": {
     "args": [
-      "func",
-      "args"
-    ],
-    "defaults": [
-      null
+      "user"
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "incron.list_tab": {
     "args": [
-      "assertion"
+      "user"
     ]
   },
-  "test.fib": {
+  "incron.ls": {
     "args": [
-      "num"
+      "user"
     ]
   },
-  "test.versions": {},
-  "test.retcode": {
+  "incron.rm": {
     "args": [
-      "code"
-    ],
-    "defaults": [
-      42
+      "user",
+      "path",
+      "mask",
+      "cmd"
     ]
   },
-  "test.collatz": {
+  "incron.set_job": {
     "args": [
-      "start"
+      "user",
+      "path",
+      "mask",
+      "cmd"
     ]
   },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
+  "incron.write_incron_file_verbose": {
     "args": [
-      "data"
+      "user",
+      "path"
     ]
   },
-  "test.attr_call": {},
-  "test.random_hash": {
+  "incron.write_incron_file": {
     "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
+      "user",
+      "path"
     ]
   },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
-  }
+  "incron.raw_system_incron": {}
 }

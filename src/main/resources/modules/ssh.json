@@ -1,138 +1,266 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "ssh.hash_known_hosts": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "user",
+      "config"
     ],
     "defaults": [
+      null,
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "ssh.check_known_host": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "user",
+      "hostname",
+      "key",
+      "fingerprint",
+      "config",
+      "port",
+      "fingerprint_hash_type"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "ssh.check_key_file": {
     "args": [
-      "size",
-      "hash_type"
+      "user",
+      "source",
+      "config",
+      "saltenv",
+      "fingerprint_hash_type"
     ],
     "defaults": [
-      9999999999,
+      ".ssh/authorized_keys",
+      "base",
       null
     ]
   },
-  "test.echo": {
+  "ssh.recv_known_host": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "hostname",
+      "enc",
+      "port",
+      "hash_known_hosts",
+      "timeout",
+      "fingerprint_hash_type"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
+      null,
+      null,
+      true,
+      5,
+      null
     ]
   },
-  "test.provider": {
+  "ssh.get_known_host_entries": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "user",
+      "hostname",
+      "config",
+      "port",
+      "fingerprint_hash_type"
     ],
     "defaults": [
-      60
+      null,
+      null,
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
+  "ssh.set_known_host": {
+    "args": [
+      "user",
+      "hostname",
+      "fingerprint",
+      "key",
+      "port",
+      "enc",
+      "config",
+      "hash_known_hosts",
+      "timeout",
+      "fingerprint_hash_type"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      5,
+      null
+    ]
+  },
+  "ssh.key_is_encrypted": {
+    "args": [
+      "key"
+    ]
+  },
+  "ssh.rm_known_host": {
+    "args": [
+      "user",
+      "hostname",
+      "config",
+      "port"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "ssh.get_known_host": {
+    "args": [
+      "user",
+      "hostname",
+      "config",
+      "port",
+      "fingerprint_hash_type"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "ssh.rm_auth_key": {
+    "args": [
+      "user",
+      "key",
+      "config",
+      "fingerprint_hash_type"
+    ],
+    "defaults": [
+      ".ssh/authorized_keys",
+      null
+    ]
+  },
+  "ssh.auth_keys": {
+    "args": [
+      "user",
+      "config",
+      "fingerprint_hash_type"
+    ],
+    "defaults": [
+      null,
+      ".ssh/authorized_keys",
+      null
+    ]
+  },
+  "ssh.set_auth_key": {
+    "args": [
+      "user",
+      "key",
+      "enc",
+      "comment",
+      "options",
+      "config",
+      "cache_keys",
+      "fingerprint_hash_type"
+    ],
+    "defaults": [
+      "ssh-rsa",
+      "",
+      null,
+      ".ssh/authorized_keys",
+      null,
+      null
+    ]
+  },
+  "ssh.rm_auth_key_from_file": {
+    "args": [
+      "user",
+      "source",
+      "config",
+      "saltenv",
+      "fingerprint_hash_type"
+    ],
+    "defaults": [
+      ".ssh/authorized_keys",
+      "base",
+      null
+    ]
+  },
+  "ssh.user_keys": {
+    "args": [
+      "user",
+      "pubfile",
+      "prvfile"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "ssh.recv_known_host_entries": {
+    "args": [
+      "hostname",
+      "enc",
+      "port",
+      "hash_known_hosts",
+      "timeout",
+      "fingerprint_hash_type"
+    ],
+    "defaults": [
+      null,
+      null,
+      true,
+      5,
+      null
+    ]
+  },
+  "ssh.set_auth_key_from_file": {
+    "args": [
+      "user",
+      "source",
+      "config",
+      "saltenv",
+      "fingerprint_hash_type"
+    ],
+    "defaults": [
+      ".ssh/authorized_keys",
+      "base",
+      null
+    ]
+  },
+  "ssh.host_keys": {
+    "args": [
+      "keydir",
+      "private",
+      "certs"
+    ],
+    "defaults": [
+      null,
+      true,
+      true
+    ]
+  },
+  "ssh.check_key": {
+    "args": [
+      "user",
+      "key",
+      "enc",
+      "comment",
+      "options",
+      "config",
+      "cache_keys",
+      "fingerprint_hash_type"
+    ],
+    "defaults": [
+      ".ssh/authorized_keys",
+      null,
+      null
+    ]
   }
 }

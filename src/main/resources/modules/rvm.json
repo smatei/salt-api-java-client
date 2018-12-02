@@ -1,138 +1,162 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "rvm.get": {
     "args": [
-      "length"
+      "version",
+      "runas"
+    ],
+    "defaults": [
+      "stable",
+      null
     ]
   },
-  "test.cross_test": {
+  "rvm.install_ruby": {
     "args": [
-      "func",
-      "args"
+      "ruby",
+      "runas",
+      "opts",
+      "env"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "rvm.is_installed": {
+    "args": [
+      "runas"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "rvm.gemset_copy": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "source",
+      "destination",
+      "runas"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.rand_str": {
+  "rvm.gemset_list_all": {
     "args": [
-      "size",
-      "hash_type"
+      "runas"
     ],
     "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.echo": {
+  "rvm.reinstall_ruby": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "ruby",
+      "runas",
+      "env"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
+      null,
+      null
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "rvm.rubygems": {
     "args": [
-      "message"
+      "ruby",
+      "version",
+      "runas"
     ],
     "defaults": [
-      "Test Exception"
+      null
     ]
   },
-  "test.provider": {
+  "rvm.gemset_list": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "ruby",
+      "runas"
     ],
     "defaults": [
-      60
+      "default",
+      null
     ]
   },
-  "test.tty": {
+  "rvm.gemset_empty": {
+    "args": [
+      "ruby",
+      "gemset",
+      "runas"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "rvm.gemset_delete": {
+    "args": [
+      "ruby",
+      "gemset",
+      "runas"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "rvm.list": {
+    "args": [
+      "runas"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "rvm.do": {
+    "args": [
+      "ruby",
+      "command",
+      "runas",
+      "cwd",
+      "env"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "rvm.wrapper": {
+    "args": [
+      "ruby_string",
+      "wrapper_prefix",
+      "runas"
+    ],
     "varargs": true,
-    "kwargs": true
+    "defaults": [
+      null
+    ]
+  },
+  "rvm.gemset_create": {
+    "args": [
+      "ruby",
+      "gemset",
+      "runas"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "rvm.set_default": {
+    "args": [
+      "ruby",
+      "runas"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "rvm.install": {
+    "args": [
+      "runas"
+    ],
+    "defaults": [
+      null
+    ]
   }
 }

@@ -1,138 +1,182 @@
 {
-  "test.kwarg": {
+  "cloud.create": {
+    "args": [
+      "provider",
+      "names",
+      "opts"
+    ],
+    "defaults": [
+      null
+    ],
     "kwargs": true
   },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "cloud.volume_list": {
     "args": [
-      "length"
+      "provider"
     ]
   },
-  "test.cross_test": {
+  "cloud.network_create": {
     "args": [
-      "func",
-      "args"
+      "provider",
+      "names"
+    ],
+    "kwargs": true
+  },
+  "cloud.network_list": {
+    "args": [
+      "provider"
+    ]
+  },
+  "cloud.volume_detach": {
+    "args": [
+      "provider",
+      "names"
+    ],
+    "kwargs": true
+  },
+  "cloud.volume_create": {
+    "args": [
+      "provider",
+      "names"
+    ],
+    "kwargs": true
+  },
+  "cloud.query": {
+    "args": [
+      "query_type"
+    ],
+    "defaults": [
+      "list_nodes"
+    ]
+  },
+  "cloud.get_instance": {
+    "args": [
+      "name",
+      "provider"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "cloud.volume_attach": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "provider",
+      "names"
     ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
     "kwargs": true
   },
-  "test.arg_clean": {
-    "varargs": true,
+  "cloud.virtual_interface_create": {
+    "args": [
+      "provider",
+      "names"
+    ],
     "kwargs": true
   },
-  "test.outputter": {
+  "cloud.action": {
     "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "fun",
+      "cloudmap",
+      "names",
+      "provider",
+      "instance"
     ],
     "defaults": [
-      9999999999,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "cloud.map_run": {
+    "args": [
+      "path"
+    ],
+    "defaults": [
+      null
+    ],
+    "kwargs": true
+  },
+  "cloud.destroy": {
+    "args": [
+      "names"
+    ]
+  },
+  "cloud.select_query": {
+    "args": [
+      "query_type"
+    ],
+    "defaults": [
+      "list_nodes_select"
+    ]
+  },
+  "cloud.list_images": {
+    "args": [
+      "provider"
+    ],
+    "defaults": [
+      "all"
+    ]
+  },
+  "cloud.full_query": {
+    "args": [
+      "query_type"
+    ],
+    "defaults": [
+      "list_nodes_full"
+    ]
+  },
+  "cloud.list_sizes": {
+    "args": [
+      "provider"
+    ],
+    "defaults": [
+      "all"
+    ]
+  },
+  "cloud.virtual_interface_list": {
+    "args": [
+      "provider",
+      "names"
+    ],
+    "kwargs": true
+  },
+  "cloud.profile": {
+    "args": [
+      "profile",
+      "names",
+      "vm_overrides",
+      "opts"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "cloud.volume_delete": {
+    "args": [
+      "provider",
+      "names"
+    ],
+    "kwargs": true
+  },
+  "cloud.list_locations": {
+    "args": [
+      "provider"
+    ],
+    "defaults": [
+      "all"
+    ]
+  },
+  "cloud.has_instance": {
+    "args": [
+      "name",
+      "provider"
+    ],
+    "defaults": [
       null
     ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

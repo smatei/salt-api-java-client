@@ -1,138 +1,323 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "grafana4.get_org": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "name",
+      "profile"
     ],
     "defaults": [
-      null
+      "grafana"
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "grafana4.delete_user": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "userid",
+      "profile"
     ],
     "defaults": [
-      42
+      "grafana"
     ]
   },
-  "test.collatz": {
+  "grafana4.update_org": {
     "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "orgid",
+      "profile"
     ],
     "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
-      false
+      "grafana"
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "grafana4.get_datasources": {
     "args": [
-      "message"
+      "orgname",
+      "profile"
     ],
     "defaults": [
-      "Test Exception"
+      null,
+      "grafana"
     ]
   },
-  "test.provider": {
+  "grafana4.delete_user_org": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "userid",
+      "orgid",
+      "profile"
     ],
     "defaults": [
-      60
+      "grafana"
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "grafana4.get_users": {
+    "args": [
+      "profile"
+    ],
+    "defaults": [
+      "grafana"
+    ]
+  },
+  "grafana4.delete_dashboard": {
+    "args": [
+      "slug",
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ]
+  },
+  "grafana4.get_orgs": {
+    "args": [
+      "profile"
+    ],
+    "defaults": [
+      "grafana"
+    ]
+  },
+  "grafana4.update_user_password": {
+    "args": [
+      "userid",
+      "profile"
+    ],
+    "defaults": [
+      "grafana"
+    ],
+    "kwargs": true
+  },
+  "grafana4.delete_datasource": {
+    "args": [
+      "datasourceid",
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ]
+  },
+  "grafana4.update_user_permissions": {
+    "args": [
+      "userid",
+      "profile"
+    ],
+    "defaults": [
+      "grafana"
+    ],
+    "kwargs": true
+  },
+  "grafana4.create_org_user": {
+    "args": [
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ],
+    "kwargs": true
+  },
+  "grafana4.update_org_address": {
+    "args": [
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ],
+    "kwargs": true
+  },
+  "grafana4.create_datasource": {
+    "args": [
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ],
+    "kwargs": true
+  },
+  "grafana4.create_update_dashboard": {
+    "args": [
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ],
+    "kwargs": true
+  },
+  "grafana4.get_user": {
+    "args": [
+      "login",
+      "profile"
+    ],
+    "defaults": [
+      "grafana"
+    ]
+  },
+  "grafana4.delete_org": {
+    "args": [
+      "orgid",
+      "profile"
+    ],
+    "defaults": [
+      "grafana"
+    ]
+  },
+  "grafana4.update_datasource": {
+    "args": [
+      "datasourceid",
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ],
+    "kwargs": true
+  },
+  "grafana4.get_user_orgs": {
+    "args": [
+      "userid",
+      "profile"
+    ],
+    "defaults": [
+      "grafana"
+    ]
+  },
+  "grafana4.create_org": {
+    "args": [
+      "profile"
+    ],
+    "defaults": [
+      "grafana"
+    ],
+    "kwargs": true
+  },
+  "grafana4.get_org_users": {
+    "args": [
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ]
+  },
+  "grafana4.get_user_data": {
+    "args": [
+      "userid",
+      "profile"
+    ],
+    "defaults": [
+      "grafana"
+    ]
+  },
+  "grafana4.get_org_address": {
+    "args": [
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ]
+  },
+  "grafana4.delete_org_user": {
+    "args": [
+      "userid",
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ]
+  },
+  "grafana4.switch_org": {
+    "args": [
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      "grafana"
+    ]
+  },
+  "grafana4.update_org_user": {
+    "args": [
+      "userid",
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ],
+    "kwargs": true
+  },
+  "grafana4.get_datasource": {
+    "args": [
+      "name",
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ]
+  },
+  "grafana4.get_org_prefs": {
+    "args": [
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ]
+  },
+  "grafana4.update_user": {
+    "args": [
+      "userid",
+      "profile"
+    ],
+    "defaults": [
+      "grafana"
+    ],
+    "kwargs": true
+  },
+  "grafana4.create_user": {
+    "args": [
+      "profile"
+    ],
+    "defaults": [
+      "grafana"
+    ],
+    "kwargs": true
+  },
+  "grafana4.get_dashboard": {
+    "args": [
+      "slug",
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ]
+  },
+  "grafana4.update_org_prefs": {
+    "args": [
+      "orgname",
+      "profile"
+    ],
+    "defaults": [
+      null,
+      "grafana"
+    ],
     "kwargs": true
   }
 }

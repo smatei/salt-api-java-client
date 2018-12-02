@@ -1,138 +1,100 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "system.shutdown": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "at_time"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "system.poweroff": {},
+  "system.get_computer_desc": {},
+  "system.set_system_date": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "newdate",
+      "utc_offset"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.rand_str": {
+  "system.has_settable_hwclock": {},
+  "system.get_system_date": {
     "args": [
-      "size",
-      "hash_type"
+      "utc_offset"
     ],
     "defaults": [
-      9999999999,
       null
     ]
   },
-  "test.echo": {
+  "system.reboot": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "at_time"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
+      null
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "system.get_system_time": {
     "args": [
-      "message"
+      "utc_offset"
     ],
     "defaults": [
-      "Test Exception"
+      null
     ]
   },
-  "test.provider": {
+  "system.set_system_date_time": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "years",
+      "months",
+      "days",
+      "hours",
+      "minutes",
+      "seconds",
+      "utc_offset"
     ],
     "defaults": [
-      60
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
-  }
+  "system.init": {
+    "args": [
+      "runlevel"
+    ]
+  },
+  "system.get_computer_name": {},
+  "system.get_system_date_time": {
+    "args": [
+      "utc_offset"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "system.set_computer_name": {
+    "args": [
+      "hostname"
+    ]
+  },
+  "system.set_system_time": {
+    "args": [
+      "newtime",
+      "utc_offset"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "system.set_computer_desc": {
+    "args": [
+      "desc"
+    ]
+  },
+  "system.halt": {}
 }

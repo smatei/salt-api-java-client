@@ -1,138 +1,129 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "pagerduty_util.resource_absent": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "resource",
+      "identifier_fields",
+      "profile",
+      "subdomain",
+      "api_key"
     ],
     "defaults": [
+      "pagerduty",
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "pagerduty_util.create_or_update_resource": {
+    "args": [
+      "resource_name",
+      "identifier_fields",
+      "data",
+      "diff",
+      "profile",
+      "subdomain",
+      "api_key"
+    ],
+    "defaults": [
+      null,
+      "pagerduty",
+      null,
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "pagerduty_util.get_users": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "profile",
+      "subdomain",
+      "api_key"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
+      "pagerduty",
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "pagerduty_util.delete_resource": {
     "args": [
-      "size",
-      "hash_type"
+      "resource_name",
+      "key",
+      "identifier_fields",
+      "profile",
+      "subdomain",
+      "api_key"
     ],
     "defaults": [
-      9999999999,
+      "pagerduty",
+      null,
       null
     ]
   },
-  "test.echo": {
+  "pagerduty_util.resource_present": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "resource",
+      "identifier_fields",
+      "diff",
+      "profile",
+      "subdomain",
+      "api_key"
     ],
     "defaults": [
-      false
+      null,
+      "pagerduty",
+      null,
+      null
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "pagerduty_util.get_resource": {
     "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "resource_name",
+      "key",
+      "identifier_fields",
+      "profile",
+      "subdomain",
+      "api_key"
     ],
     "defaults": [
-      60
+      "pagerduty",
+      null,
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
+  "pagerduty_util.get_schedules": {
+    "args": [
+      "profile",
+      "subdomain",
+      "api_key"
+    ],
+    "defaults": [
+      "pagerduty",
+      null,
+      null
+    ]
+  },
+  "pagerduty_util.get_escalation_policies": {
+    "args": [
+      "profile",
+      "subdomain",
+      "api_key"
+    ],
+    "defaults": [
+      "pagerduty",
+      null,
+      null
+    ]
+  },
+  "pagerduty_util.get_services": {
+    "args": [
+      "profile",
+      "subdomain",
+      "api_key"
+    ],
+    "defaults": [
+      "pagerduty",
+      null,
+      null
+    ]
   }
 }

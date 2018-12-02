@@ -1,138 +1,148 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "grains.equals": {
     "args": [
-      "length"
+      "key",
+      "value"
     ]
   },
-  "test.cross_test": {
+  "grains.filter_by": {
     "args": [
-      "func",
-      "args"
+      "lookup_dict",
+      "grain",
+      "merge",
+      "default",
+      "base"
     ],
     "defaults": [
+      "os_family",
+      null,
+      "default",
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "grains.delkey": {
     "args": [
-      "assertion"
+      "key"
     ]
   },
-  "test.fib": {
+  "grains.has_value": {
     "args": [
-      "num"
+      "key"
     ]
   },
-  "test.versions": {},
-  "test.retcode": {
+  "grains.remove": {
     "args": [
-      "code"
+      "key",
+      "val",
+      "delimiter"
     ],
     "defaults": [
-      42
+      ":"
     ]
   },
-  "test.collatz": {
+  "grains.ls": {},
+  "grains.get_or_set_hash": {
     "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "name",
+      "length",
+      "chars"
     ],
     "defaults": [
-      9999999999,
-      null
+      8,
+      "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^\u0026*(-_\u003d+)"
     ]
   },
-  "test.rand_str": {
+  "grains.items": {
     "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "sanitize"
     ],
     "defaults": [
       false
-    ],
-    "kwargs": true
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
+  "grains.item": {
     "varargs": true,
     "kwargs": true
   },
-  "test.stack": {},
-  "test.exception": {
+  "grains.set": {
     "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "key",
+      "val",
+      "force",
+      "destructive",
+      "delimiter"
     ],
     "defaults": [
-      60
+      "",
+      false,
+      false,
+      ":"
     ]
   },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
+  "grains.setval": {
+    "args": [
+      "key",
+      "val",
+      "destructive"
+    ],
+    "defaults": [
+      false
+    ]
+  },
+  "grains.fetch": {
+    "args": [
+      "key",
+      "default",
+      "delimiter",
+      "ordered"
+    ],
+    "defaults": [
+      "",
+      ":",
+      true
+    ]
+  },
+  "grains.append": {
+    "args": [
+      "key",
+      "val",
+      "convert",
+      "delimiter"
+    ],
+    "defaults": [
+      false,
+      ":"
+    ]
+  },
+  "grains.get": {
+    "args": [
+      "key",
+      "default",
+      "delimiter",
+      "ordered"
+    ],
+    "defaults": [
+      "",
+      ":",
+      true
+    ]
+  },
+  "grains.setvals": {
+    "args": [
+      "grains",
+      "destructive"
+    ],
+    "defaults": [
+      false
+    ]
+  },
+  "grains.delval": {
+    "args": [
+      "key",
+      "destructive"
+    ],
+    "defaults": [
+      false
+    ]
   }
 }

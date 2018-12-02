@@ -1,138 +1,81 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "composer.update": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "directory",
+      "composer",
+      "php",
+      "runas",
+      "prefer_source",
+      "prefer_dist",
+      "no_scripts",
+      "no_plugins",
+      "optimize",
+      "no_dev",
+      "quiet",
+      "composer_home"
     ],
     "defaults": [
-      null
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      false,
+      "/root"
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "composer.did_composer_install": {
     "args": [
-      "assertion"
+      "dir"
     ]
   },
-  "test.fib": {
+  "composer.install": {
     "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "directory",
+      "composer",
+      "php",
+      "runas",
+      "prefer_source",
+      "prefer_dist",
+      "no_scripts",
+      "no_plugins",
+      "optimize",
+      "no_dev",
+      "quiet",
+      "composer_home"
     ],
     "defaults": [
-      42
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      false,
+      "/root"
     ]
   },
-  "test.collatz": {
+  "composer.selfupdate": {
     "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "composer",
+      "php",
+      "runas",
+      "quiet",
+      "composer_home"
     ],
     "defaults": [
-      9999999999,
-      null
+      null,
+      null,
+      null,
+      false,
+      "/root"
     ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

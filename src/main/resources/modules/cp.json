@@ -1,138 +1,240 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "cp.list_master_dirs": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "saltenv",
+      "prefix"
     ],
     "defaults": [
+      "base",
+      ""
+    ]
+  },
+  "cp.recv_chunked": {
+    "args": [
+      "dest",
+      "chunk",
+      "append",
+      "compressed",
+      "mode"
+    ],
+    "defaults": [
+      false,
+      true,
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "cp.push": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "path",
+      "keep_symlinks",
+      "upload_path",
+      "remove_source"
     ],
     "defaults": [
-      42
+      false,
+      null,
+      false
     ]
   },
-  "test.collatz": {
+  "cp.get_template": {
     "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "path",
+      "dest",
+      "template",
+      "saltenv",
+      "makedirs"
     ],
     "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
+      "jinja",
+      "base",
       false
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "cp.list_minion": {
     "args": [
-      "message"
+      "saltenv"
     ],
     "defaults": [
-      "Test Exception"
+      "base"
     ]
   },
-  "test.provider": {
+  "cp.get_file_str": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "path",
+      "saltenv"
     ],
     "defaults": [
-      60
+      "base"
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "cp.list_master_symlinks": {
+    "args": [
+      "saltenv",
+      "prefix"
+    ],
+    "defaults": [
+      "base",
+      ""
+    ]
+  },
+  "cp.cache_dir": {
+    "args": [
+      "path",
+      "saltenv",
+      "include_empty",
+      "include_pat",
+      "exclude_pat"
+    ],
+    "defaults": [
+      "base",
+      false,
+      null,
+      null
+    ]
+  },
+  "cp.cache_file": {
+    "args": [
+      "path",
+      "saltenv",
+      "source_hash"
+    ],
+    "defaults": [
+      "base",
+      null
+    ]
+  },
+  "cp.list_states": {
+    "args": [
+      "saltenv"
+    ],
+    "defaults": [
+      "base"
+    ]
+  },
+  "cp.get_file": {
+    "args": [
+      "path",
+      "dest",
+      "saltenv",
+      "makedirs",
+      "template",
+      "gzip"
+    ],
+    "defaults": [
+      "base",
+      false,
+      null,
+      null
+    ],
     "kwargs": true
+  },
+  "cp.push_dir": {
+    "args": [
+      "path",
+      "glob",
+      "upload_path"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "cp.hash_file": {
+    "args": [
+      "path",
+      "saltenv"
+    ],
+    "defaults": [
+      "base"
+    ]
+  },
+  "cp.list_master": {
+    "args": [
+      "saltenv",
+      "prefix"
+    ],
+    "defaults": [
+      "base",
+      ""
+    ]
+  },
+  "cp.is_cached": {
+    "args": [
+      "path",
+      "saltenv"
+    ],
+    "defaults": [
+      "base"
+    ]
+  },
+  "cp.cache_files": {
+    "args": [
+      "paths",
+      "saltenv"
+    ],
+    "defaults": [
+      "base"
+    ]
+  },
+  "cp.get_url": {
+    "args": [
+      "path",
+      "dest",
+      "saltenv",
+      "makedirs",
+      "source_hash"
+    ],
+    "defaults": [
+      "",
+      "base",
+      false,
+      null
+    ]
+  },
+  "cp.cache_master": {
+    "args": [
+      "saltenv"
+    ],
+    "defaults": [
+      "base"
+    ]
+  },
+  "cp.recv": {
+    "args": [
+      "files",
+      "dest"
+    ]
+  },
+  "cp.cache_local_file": {
+    "args": [
+      "path"
+    ]
+  },
+  "cp.get_dir": {
+    "args": [
+      "path",
+      "dest",
+      "saltenv",
+      "template",
+      "gzip"
+    ],
+    "defaults": [
+      "base",
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "cp.stat_file": {
+    "args": [
+      "path",
+      "saltenv",
+      "octal"
+    ],
+    "defaults": [
+      "base",
+      true
+    ]
   }
 }

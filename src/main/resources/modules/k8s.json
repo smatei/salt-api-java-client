@@ -1,138 +1,124 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "k8s.update_secret": {
     "args": [
-      "length"
+      "namespace",
+      "name",
+      "sources",
+      "apiserver_url",
+      "force",
+      "saltenv"
+    ],
+    "defaults": [
+      null,
+      true,
+      "base"
     ]
   },
-  "test.cross_test": {
+  "k8s.label_folder_absent": {
     "args": [
-      "func",
-      "args"
+      "name",
+      "node",
+      "apiserver_url"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "k8s.label_present": {
+    "args": [
+      "name",
+      "value",
+      "node",
+      "apiserver_url"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "k8s.create_namespace": {
+    "args": [
+      "name",
+      "apiserver_url"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "k8s.label_absent": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "name",
+      "node",
+      "apiserver_url"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "k8s.delete_secret": {
     "args": [
-      "size",
-      "hash_type"
+      "namespace",
+      "name",
+      "apiserver_url",
+      "force"
     ],
     "defaults": [
-      9999999999,
+      null,
+      true
+    ]
+  },
+  "k8s.get_namespaces": {
+    "args": [
+      "namespace",
+      "apiserver_url"
+    ],
+    "defaults": [
+      "",
       null
     ]
   },
-  "test.echo": {
+  "k8s.get_labels": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "node",
+      "apiserver_url"
     ],
     "defaults": [
+      null,
+      null
+    ]
+  },
+  "k8s.create_secret": {
+    "args": [
+      "namespace",
+      "name",
+      "sources",
+      "apiserver_url",
+      "force",
+      "update",
+      "saltenv"
+    ],
+    "defaults": [
+      null,
+      false,
+      false,
+      "base"
+    ]
+  },
+  "k8s.get_secrets": {
+    "args": [
+      "namespace",
+      "name",
+      "apiserver_url",
+      "decode",
+      "brief"
+    ],
+    "defaults": [
+      "",
+      null,
+      false,
       false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
     ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

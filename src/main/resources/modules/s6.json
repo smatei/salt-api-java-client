@@ -1,138 +1,52 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "s6.status": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "name",
+      "sig"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "s6.start": {
     "args": [
-      "assertion"
+      "name"
     ]
   },
-  "test.fib": {
+  "s6.full_restart": {
     "args": [
-      "num"
+      "name"
     ]
   },
-  "test.versions": {},
-  "test.retcode": {
+  "s6.term": {
     "args": [
-      "code"
-    ],
-    "defaults": [
-      42
+      "name"
     ]
   },
-  "test.collatz": {
+  "s6.available": {
     "args": [
-      "start"
+      "name"
     ]
   },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
+  "s6.missing": {
     "args": [
-      "data"
+      "name"
     ]
   },
-  "test.attr_call": {},
-  "test.random_hash": {
+  "s6.stop": {
     "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
+      "name"
     ]
   },
-  "test.rand_str": {
+  "s6.get_all": {},
+  "s6.reload": {
     "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
+      "name"
     ]
   },
-  "test.echo": {
+  "s6.restart": {
     "args": [
-      "text"
+      "name"
     ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
-    ],
-    "defaults": [
-      60
-    ]
-  },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
   }
 }

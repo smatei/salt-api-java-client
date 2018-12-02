@@ -1,138 +1,919 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "git.worktree_add": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "cwd",
+      "worktree_path",
+      "ref",
+      "reset_branch",
+      "force",
+      "detach",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
     ],
     "defaults": [
+      null,
+      null,
+      null,
+      false,
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
+    ],
+    "kwargs": true
+  },
+  "git.commit": {
+    "args": [
+      "cwd",
+      "message",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "filename",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      "",
+      "",
+      null,
+      null,
+      null,
+      false,
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "git.remote_get": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "cwd",
+      "remote",
+      "user",
+      "password",
+      "redact_auth",
+      "ignore_retcode",
+      "output_encoding"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
+      "origin",
+      null,
+      null,
+      true,
+      false,
       null
     ]
   },
-  "test.rand_str": {
+  "git.worktree_rm": {
     "args": [
-      "size",
-      "hash_type"
+      "cwd",
+      "user",
+      "output_encoding"
     ],
     "defaults": [
-      9999999999,
+      null,
       null
     ]
   },
-  "test.echo": {
+  "git.config_set": {
     "args": [
-      "text"
+      "key",
+      "value",
+      "multivar",
+      "cwd",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      false,
+      null
+    ],
+    "kwargs": true
+  },
+  "git.stash": {
+    "args": [
+      "cwd",
+      "action",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      "save",
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
     ]
   },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
+  "git.remote_refs": {
     "args": [
-      "module",
-      "return_try_exception"
+      "url",
+      "heads",
+      "tags",
+      "user",
+      "password",
+      "identity",
+      "https_user",
+      "https_pass",
+      "ignore_retcode",
+      "output_encoding",
+      "saltenv"
+    ],
+    "defaults": [
+      false,
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
+      false,
+      null,
+      "base"
+    ]
+  },
+  "git.archive": {
+    "args": [
+      "cwd",
+      "output",
+      "rev",
+      "prefix",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      "HEAD",
+      null,
+      "",
+      null,
+      null,
+      false,
+      null
+    ],
+    "kwargs": true
+  },
+  "git.submodule": {
+    "args": [
+      "cwd",
+      "command",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "identity",
+      "ignore_retcode",
+      "saltenv",
+      "output_encoding"
+    ],
+    "defaults": [
+      "",
+      "",
+      null,
+      null,
+      null,
+      false,
+      "base",
+      null
+    ],
+    "kwargs": true
+  },
+  "git.merge_base": {
+    "args": [
+      "cwd",
+      "refs",
+      "octopus",
+      "is_ancestor",
+      "independent",
+      "fork_point",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      false,
+      false,
+      false,
+      null,
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
+    ],
+    "kwargs": true
+  },
+  "git.rm": {
+    "args": [
+      "cwd",
+      "filename",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.config_get_regex": {
+    "args": [
+      "key",
+      "value_regex",
+      "cwd",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      false,
+      null
+    ],
+    "kwargs": true
+  },
+  "git.list_worktrees": {
+    "args": [
+      "cwd",
+      "stale",
+      "user",
+      "password",
+      "output_encoding"
+    ],
+    "defaults": [
+      false,
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "git.add": {
+    "args": [
+      "cwd",
+      "filename",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.fetch": {
+    "args": [
+      "cwd",
+      "remote",
+      "force",
+      "refspecs",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "identity",
+      "ignore_retcode",
+      "saltenv",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      false,
+      null,
+      "",
+      "",
+      null,
+      null,
+      null,
+      false,
+      "base",
+      null
+    ]
+  },
+  "git.config_get_regexp": {
+    "args": [
+      "key",
+      "value_regex",
+      "cwd",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      false,
+      null
+    ],
+    "kwargs": true
+  },
+  "git.is_worktree": {
+    "args": [
+      "cwd",
+      "user",
+      "password",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "git.clone": {
+    "args": [
+      "cwd",
+      "url",
+      "name",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "identity",
+      "https_user",
+      "https_pass",
+      "ignore_retcode",
+      "saltenv",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      "",
+      "",
+      null,
+      null,
+      null,
+      null,
+      null,
+      false,
+      "base",
+      null
+    ]
+  },
+  "git.current_branch": {
+    "args": [
+      "cwd",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.checkout": {
+    "args": [
+      "cwd",
+      "rev",
+      "force",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      false,
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.status": {
+    "args": [
+      "cwd",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.merge_tree": {
+    "args": [
+      "cwd",
+      "ref1",
+      "ref2",
+      "base",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.version": {
+    "args": [
+      "versioninfo"
     ],
     "defaults": [
       false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
     ]
   },
-  "test.provider": {
+  "git.branch": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "cwd",
+      "name",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
     ],
     "defaults": [
-      60
+      null,
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "git.config_get": {
+    "args": [
+      "key",
+      "cwd",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      false,
+      null
+    ],
     "kwargs": true
+  },
+  "git.reset": {
+    "args": [
+      "cwd",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.list_tags": {
+    "args": [
+      "cwd",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.remote_set": {
+    "args": [
+      "cwd",
+      "url",
+      "remote",
+      "user",
+      "password",
+      "https_user",
+      "https_pass",
+      "push_url",
+      "push_https_user",
+      "push_https_pass",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      "origin",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.ls_remote": {
+    "args": [
+      "cwd",
+      "remote",
+      "ref",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "identity",
+      "https_user",
+      "https_pass",
+      "ignore_retcode",
+      "output_encoding",
+      "saltenv"
+    ],
+    "defaults": [
+      null,
+      "origin",
+      null,
+      "",
+      "",
+      null,
+      null,
+      null,
+      null,
+      null,
+      false,
+      null,
+      "base"
+    ]
+  },
+  "git.revision": {
+    "args": [
+      "cwd",
+      "rev",
+      "short",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      "HEAD",
+      false,
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.worktree_prune": {
+    "args": [
+      "cwd",
+      "dry_run",
+      "verbose",
+      "expire",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      false,
+      true,
+      null,
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.list_branches": {
+    "args": [
+      "cwd",
+      "remote",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      false,
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.diff": {
+    "args": [
+      "cwd",
+      "item1",
+      "item2",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "no_index",
+      "cached",
+      "paths",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      "",
+      "",
+      null,
+      null,
+      false,
+      false,
+      null,
+      null
+    ]
+  },
+  "git.rebase": {
+    "args": [
+      "cwd",
+      "rev",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      "master",
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.describe": {
+    "args": [
+      "cwd",
+      "rev",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      "HEAD",
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.push": {
+    "args": [
+      "cwd",
+      "remote",
+      "ref",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "identity",
+      "ignore_retcode",
+      "saltenv",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      "",
+      "",
+      null,
+      null,
+      null,
+      false,
+      "base",
+      null
+    ],
+    "kwargs": true
+  },
+  "git.init": {
+    "args": [
+      "cwd",
+      "bare",
+      "template",
+      "separate_git_dir",
+      "shared",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      false,
+      null,
+      null,
+      null,
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.rev_parse": {
+    "args": [
+      "cwd",
+      "rev",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
+    ]
+  },
+  "git.config_unset": {
+    "args": [
+      "key",
+      "value_regex",
+      "cwd",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      false,
+      null
+    ],
+    "kwargs": true
+  },
+  "git.merge": {
+    "args": [
+      "cwd",
+      "rev",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
+    ],
+    "kwargs": true
+  },
+  "git.remotes": {
+    "args": [
+      "cwd",
+      "user",
+      "password",
+      "redact_auth",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      null,
+      true,
+      false,
+      null
+    ]
+  },
+  "git.pull": {
+    "args": [
+      "cwd",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "identity",
+      "ignore_retcode",
+      "saltenv",
+      "output_encoding"
+    ],
+    "defaults": [
+      "",
+      "",
+      null,
+      null,
+      null,
+      false,
+      "base",
+      null
+    ]
+  },
+  "git.symbolic_ref": {
+    "args": [
+      "cwd",
+      "ref",
+      "value",
+      "opts",
+      "git_opts",
+      "user",
+      "password",
+      "ignore_retcode",
+      "output_encoding"
+    ],
+    "defaults": [
+      null,
+      "",
+      "",
+      null,
+      null,
+      false,
+      null
+    ]
   }
 }

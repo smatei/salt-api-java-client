@@ -1,138 +1,77 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "namecheap_ssl.reissue": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "csr_file",
+      "certificate_id",
+      "web_server_type",
+      "approver_email",
+      "http_dc_validation"
     ],
     "defaults": [
-      null
-    ]
-  },
-  "test.not_loaded": {},
-  "test.assertion": {
-    "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
-    ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
+      null,
       false
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
+  "namecheap_ssl.get_list": {
     "kwargs": true
   },
-  "test.stack": {},
-  "test.exception": {
+  "namecheap_ssl.get_info": {
     "args": [
-      "message"
+      "certificate_id",
+      "returncertificate",
+      "returntype"
     ],
     "defaults": [
-      "Test Exception"
+      false,
+      null
     ]
   },
-  "test.provider": {
+  "namecheap_ssl.create": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "years",
+      "certificate_type",
+      "promotion_code",
+      "sans_to_add"
     ],
     "defaults": [
-      60
+      null,
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "namecheap_ssl.renew": {
+    "args": [
+      "years",
+      "certificate_id",
+      "certificate_type",
+      "promotion_code"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "namecheap_ssl.activate": {
+    "args": [
+      "csr_file",
+      "certificate_id",
+      "web_server_type",
+      "approver_email",
+      "http_dc_validation"
+    ],
+    "defaults": [
+      null,
+      false
+    ],
     "kwargs": true
+  },
+  "namecheap_ssl.parse_csr": {
+    "args": [
+      "csr_file",
+      "certificate_type",
+      "http_dc_validation"
+    ],
+    "defaults": [
+      false
+    ]
   }
 }

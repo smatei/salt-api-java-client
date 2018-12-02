@@ -1,138 +1,131 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "gem.sources_list": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "ruby",
+      "runas",
+      "gem_bin"
     ],
     "defaults": [
+      null,
+      null,
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "gem.sources_remove": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "source_uri",
+      "ruby",
+      "runas",
+      "gem_bin"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
+      null,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "gem.update": {
     "args": [
-      "size",
-      "hash_type"
+      "gems",
+      "ruby",
+      "runas",
+      "gem_bin"
     ],
     "defaults": [
-      9999999999,
+      null,
+      null,
       null
     ]
   },
-  "test.echo": {
+  "gem.install": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "gems",
+      "ruby",
+      "gem_bin",
+      "runas",
+      "version",
+      "rdoc",
+      "ri",
+      "pre_releases",
+      "proxy",
+      "source"
     ],
     "defaults": [
-      false
-    ],
-    "kwargs": true
-  },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
-    "args": [
-      "message"
-    ],
-    "defaults": [
-      "Test Exception"
+      null,
+      null,
+      null,
+      null,
+      false,
+      false,
+      false,
+      null,
+      null
     ]
   },
-  "test.provider": {
+  "gem.sources_add": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "source_uri",
+      "ruby",
+      "runas",
+      "gem_bin"
     ],
     "defaults": [
-      60
+      null,
+      null,
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
-    "kwargs": true
+  "gem.list": {
+    "args": [
+      "prefix",
+      "ruby",
+      "runas",
+      "gem_bin"
+    ],
+    "defaults": [
+      "",
+      null,
+      null,
+      null
+    ]
+  },
+  "gem.uninstall": {
+    "args": [
+      "gems",
+      "ruby",
+      "runas",
+      "gem_bin"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "gem.list_upgrades": {
+    "args": [
+      "ruby",
+      "runas",
+      "gem_bin"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "gem.update_system": {
+    "args": [
+      "version",
+      "ruby",
+      "runas",
+      "gem_bin"
+    ],
+    "defaults": [
+      "",
+      null,
+      null,
+      null
+    ]
   }
 }

@@ -1,138 +1,235 @@
 {
-  "test.kwarg": {
+  "pip.freeze": {
+    "args": [
+      "bin_env",
+      "user",
+      "cwd",
+      "use_vt",
+      "env_vars"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      false,
+      null
+    ],
     "kwargs": true
   },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "pip.uninstall": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "pkgs",
+      "requirements",
+      "bin_env",
+      "log",
+      "proxy",
+      "timeout",
+      "user",
+      "cwd",
+      "saltenv",
+      "use_vt"
     ],
     "defaults": [
-      null
-    ]
-  },
-  "test.not_loaded": {},
-  "test.assertion": {
-    "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
-    ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
-    "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "base",
       false
-    ],
-    "kwargs": true
+    ]
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "pip.list": {
     "args": [
-      "message"
+      "prefix",
+      "bin_env",
+      "user",
+      "cwd",
+      "env_vars"
     ],
     "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
     "kwargs": true
   },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
+  "pip.upgrade_available": {
     "args": [
-      "max"
+      "pkg",
+      "bin_env",
+      "user",
+      "cwd"
     ],
     "defaults": [
-      60
+      null,
+      null,
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "pip.upgrade": {
+    "args": [
+      "bin_env",
+      "user",
+      "cwd",
+      "use_vt"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      false
+    ]
+  },
+  "pip.list_all_versions": {
+    "args": [
+      "pkg",
+      "bin_env",
+      "include_alpha",
+      "include_beta",
+      "include_rc",
+      "user",
+      "cwd"
+    ],
+    "defaults": [
+      null,
+      false,
+      false,
+      false,
+      null,
+      null
+    ]
+  },
+  "pip.install": {
+    "args": [
+      "pkgs",
+      "requirements",
+      "bin_env",
+      "use_wheel",
+      "no_use_wheel",
+      "log",
+      "proxy",
+      "timeout",
+      "editable",
+      "find_links",
+      "index_url",
+      "extra_index_url",
+      "no_index",
+      "mirrors",
+      "build",
+      "target",
+      "download",
+      "download_cache",
+      "source",
+      "upgrade",
+      "force_reinstall",
+      "ignore_installed",
+      "exists_action",
+      "no_deps",
+      "no_install",
+      "no_download",
+      "global_options",
+      "install_options",
+      "user",
+      "cwd",
+      "pre_releases",
+      "cert",
+      "allow_all_external",
+      "allow_external",
+      "allow_unverified",
+      "process_dependency_links",
+      "saltenv",
+      "env_vars",
+      "use_vt",
+      "trusted_host",
+      "no_cache_dir",
+      "cache_dir",
+      "no_binary"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      false,
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      false,
+      false,
+      false,
+      null,
+      false,
+      false,
+      false,
+      null,
+      null,
+      null,
+      null,
+      false,
+      null,
+      false,
+      null,
+      null,
+      false,
+      "base",
+      null,
+      false,
+      null,
+      false,
+      null,
+      null
+    ],
     "kwargs": true
+  },
+  "pip.version": {
+    "args": [
+      "bin_env"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "pip.list_upgrades": {
+    "args": [
+      "bin_env",
+      "user",
+      "cwd"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "pip.is_installed": {
+    "args": [
+      "pkgname",
+      "bin_env",
+      "user",
+      "cwd"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null
+    ]
   }
 }

@@ -1,138 +1,969 @@
 {
-  "test.kwarg": {
+  "file.apply_template_on_contents": {
+    "args": [
+      "contents",
+      "template",
+      "context",
+      "defaults",
+      "saltenv"
+    ]
+  },
+  "file.get_mode": {
+    "args": [
+      "path",
+      "follow_symlinks"
+    ],
+    "defaults": [
+      true
+    ]
+  },
+  "file.restorecon": {
+    "args": [
+      "path",
+      "recursive"
+    ],
+    "defaults": [
+      false
+    ]
+  },
+  "file.normpath": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.readlink": {
+    "args": [
+      "path",
+      "canonicalize"
+    ],
+    "defaults": [
+      false
+    ]
+  },
+  "file.uncomment": {
+    "args": [
+      "path",
+      "regex",
+      "char",
+      "backup"
+    ],
+    "defaults": [
+      "#",
+      ".bak"
+    ]
+  },
+  "file.readdir": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.delete_backup": {
+    "args": [
+      "path",
+      "backup_id"
+    ]
+  },
+  "file.file_exists": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.lsattr": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.check_managed": {
+    "args": [
+      "name",
+      "source",
+      "source_hash",
+      "source_hash_name",
+      "user",
+      "group",
+      "mode",
+      "attrs",
+      "template",
+      "context",
+      "defaults",
+      "saltenv",
+      "contents",
+      "skip_verify"
+    ],
+    "defaults": [
+      null,
+      false
+    ],
     "kwargs": true
   },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "file.replace": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "path",
+      "pattern",
+      "repl",
+      "count",
+      "flags",
+      "bufsize",
+      "append_if_not_found",
+      "prepend_if_not_found",
+      "not_found_content",
+      "backup",
+      "dry_run",
+      "search_only",
+      "show_changes",
+      "ignore_if_missing",
+      "preserve_inode",
+      "backslash_literal"
     ],
     "defaults": [
-      null
+      0,
+      8,
+      1,
+      false,
+      false,
+      null,
+      ".bak",
+      false,
+      false,
+      true,
+      false,
+      true,
+      false
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "file.manage_file": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "name",
+      "sfn",
+      "ret",
+      "source",
+      "source_sum",
+      "user",
+      "group",
+      "mode",
+      "attrs",
+      "saltenv",
+      "backup",
+      "makedirs",
+      "template",
+      "show_changes",
+      "contents",
+      "dir_mode",
+      "follow_symlinks",
+      "skip_verify",
+      "keep_mode",
+      "encoding",
+      "encoding_errors"
     ],
     "defaults": [
-      42
-    ]
+      false,
+      null,
+      true,
+      null,
+      null,
+      true,
+      false,
+      false,
+      null,
+      "strict"
+    ],
+    "kwargs": true
   },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
+  "file.chattr": {
     "varargs": true,
     "kwargs": true
   },
-  "test.arg_clean": {
+  "file.get_sum": {
+    "args": [
+      "path",
+      "form"
+    ],
+    "defaults": [
+      "sha256"
+    ]
+  },
+  "file.get_uid": {
+    "args": [
+      "path",
+      "follow_symlinks"
+    ],
+    "defaults": [
+      true
+    ]
+  },
+  "file.prepend": {
+    "args": [
+      "path"
+    ],
     "varargs": true,
     "kwargs": true
   },
-  "test.outputter": {
+  "file.move": {
     "args": [
-      "data"
+      "src",
+      "dst"
     ]
   },
-  "test.attr_call": {},
-  "test.random_hash": {
+  "file.set_selinux_context": {
     "args": [
-      "size",
-      "hash_type"
+      "path",
+      "user",
+      "role",
+      "type",
+      "range"
     ],
     "defaults": [
-      9999999999,
+      null,
+      null,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "file.get_managed": {
     "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "name",
+      "template",
+      "source",
+      "source_hash",
+      "source_hash_name",
+      "user",
+      "group",
+      "mode",
+      "attrs",
+      "saltenv",
+      "context",
+      "defaults",
+      "skip_verify"
     ],
     "defaults": [
       false
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "file.statvfs": {
     "args": [
-      "message"
+      "path"
+    ]
+  },
+  "file.mknod_blkdev": {
+    "args": [
+      "name",
+      "major",
+      "minor",
+      "user",
+      "group",
+      "mode"
     ],
     "defaults": [
-      "Test Exception"
+      null,
+      null,
+      "0660"
     ]
   },
-  "test.provider": {
+  "file.truncate": {
     "args": [
-      "module"
+      "path",
+      "length"
     ]
   },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
+  "file.extract_hash": {
     "args": [
-      "max"
+      "hash_fn",
+      "hash_type",
+      "file_name",
+      "source",
+      "source_hash_name"
     ],
     "defaults": [
-      60
+      "sha256",
+      "",
+      "",
+      null
     ]
   },
-  "test.tty": {
+  "file.gid_to_group": {
+    "args": [
+      "gid"
+    ]
+  },
+  "file.list_backup": {
+    "args": [
+      "path",
+      "limit"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "file.write": {
+    "args": [
+      "path"
+    ],
     "varargs": true,
     "kwargs": true
+  },
+  "file.sed_contains": {
+    "args": [
+      "path",
+      "text",
+      "limit",
+      "flags"
+    ],
+    "defaults": [
+      "",
+      "g"
+    ]
+  },
+  "file.check_perms": {
+    "args": [
+      "name",
+      "ret",
+      "user",
+      "group",
+      "mode",
+      "attrs",
+      "follow_symlinks"
+    ],
+    "defaults": [
+      null,
+      false
+    ]
+  },
+  "file.comment": {
+    "args": [
+      "path",
+      "regex",
+      "char",
+      "backup"
+    ],
+    "defaults": [
+      "#",
+      ".bak"
+    ]
+  },
+  "file.dirname": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.directory_exists": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.makedirs": {
+    "args": [
+      "path",
+      "user",
+      "group",
+      "mode"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "file.append": {
+    "args": [
+      "path"
+    ],
+    "varargs": true,
+    "kwargs": true
+  },
+  "file.mknod": {
+    "args": [
+      "name",
+      "ntype",
+      "major",
+      "minor",
+      "user",
+      "group",
+      "mode"
+    ],
+    "defaults": [
+      0,
+      0,
+      null,
+      null,
+      "0600"
+    ]
+  },
+  "file.is_chrdev": {
+    "args": [
+      "name"
+    ]
+  },
+  "file.group_to_gid": {
+    "args": [
+      "group"
+    ]
+  },
+  "file.is_blkdev": {
+    "args": [
+      "name"
+    ]
+  },
+  "file.symlink": {
+    "args": [
+      "src",
+      "path"
+    ]
+  },
+  "file.list_backups": {
+    "args": [
+      "path",
+      "limit"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "file.get_group": {
+    "args": [
+      "path",
+      "follow_symlinks"
+    ],
+    "defaults": [
+      true
+    ]
+  },
+  "file.join": {
+    "varargs": true
+  },
+  "file.contains": {
+    "args": [
+      "path",
+      "text"
+    ]
+  },
+  "file.search": {
+    "args": [
+      "path",
+      "pattern",
+      "flags",
+      "bufsize",
+      "ignore_if_missing",
+      "multiline"
+    ],
+    "defaults": [
+      8,
+      1,
+      false,
+      false
+    ]
+  },
+  "file.mkdir": {
+    "args": [
+      "dir_path",
+      "user",
+      "group",
+      "mode"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "file.uid_to_user": {
+    "args": [
+      "uid"
+    ]
+  },
+  "file.path_exists_glob": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.chown": {
+    "args": [
+      "path",
+      "user",
+      "group"
+    ]
+  },
+  "file.access": {
+    "args": [
+      "path",
+      "mode"
+    ]
+  },
+  "file.patch": {
+    "args": [
+      "originalfile",
+      "patchfile",
+      "options",
+      "dry_run"
+    ],
+    "defaults": [
+      "",
+      false
+    ]
+  },
+  "file.read": {
+    "args": [
+      "path",
+      "binary"
+    ],
+    "defaults": [
+      false
+    ]
+  },
+  "file.grep": {
+    "args": [
+      "path",
+      "pattern"
+    ],
+    "varargs": true
+  },
+  "file.seek_write": {
+    "args": [
+      "path",
+      "data",
+      "offset"
+    ]
+  },
+  "file.diskusage": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.open_files": {
+    "args": [
+      "by_pid"
+    ],
+    "defaults": [
+      false
+    ]
+  },
+  "file.find": {
+    "args": [
+      "path"
+    ],
+    "varargs": true,
+    "kwargs": true
+  },
+  "file.check_hash": {
+    "args": [
+      "path",
+      "file_hash"
+    ]
+  },
+  "file.makedirs_perms": {
+    "args": [
+      "name",
+      "user",
+      "group",
+      "mode"
+    ],
+    "defaults": [
+      null,
+      null,
+      "0755"
+    ]
+  },
+  "file.get_selinux_context": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.seek_read": {
+    "args": [
+      "path",
+      "size",
+      "offset"
+    ]
+  },
+  "file.comment_line": {
+    "args": [
+      "path",
+      "regex",
+      "char",
+      "cmnt",
+      "backup"
+    ],
+    "defaults": [
+      "#",
+      true,
+      ".bak"
+    ]
+  },
+  "file.chgrp": {
+    "args": [
+      "path",
+      "group"
+    ]
+  },
+  "file.basename": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.sed": {
+    "args": [
+      "path",
+      "before",
+      "after",
+      "limit",
+      "backup",
+      "options",
+      "flags",
+      "escape_all",
+      "negate_match"
+    ],
+    "defaults": [
+      "",
+      ".bak",
+      "-r -e",
+      "g",
+      false,
+      false
+    ]
+  },
+  "file.remove_backup": {
+    "args": [
+      "path",
+      "backup_id"
+    ]
+  },
+  "file.is_link": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.get_hash": {
+    "args": [
+      "path",
+      "form",
+      "chunk_size"
+    ],
+    "defaults": [
+      "sha256",
+      65536
+    ]
+  },
+  "file.stats": {
+    "args": [
+      "path",
+      "hash_type",
+      "follow_symlinks"
+    ],
+    "defaults": [
+      null,
+      true
+    ]
+  },
+  "file.mknod_chrdev": {
+    "args": [
+      "name",
+      "major",
+      "minor",
+      "user",
+      "group",
+      "mode"
+    ],
+    "defaults": [
+      null,
+      null,
+      "0660"
+    ]
+  },
+  "file.check_file_meta": {
+    "args": [
+      "name",
+      "sfn",
+      "source",
+      "source_sum",
+      "user",
+      "group",
+      "mode",
+      "attrs",
+      "saltenv",
+      "contents"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "file.check_managed_changes": {
+    "args": [
+      "name",
+      "source",
+      "source_hash",
+      "source_hash_name",
+      "user",
+      "group",
+      "mode",
+      "attrs",
+      "template",
+      "context",
+      "defaults",
+      "saltenv",
+      "contents",
+      "skip_verify",
+      "keep_mode"
+    ],
+    "defaults": [
+      null,
+      false,
+      false
+    ],
+    "kwargs": true
+  },
+  "file.touch": {
+    "args": [
+      "name",
+      "atime",
+      "mtime"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "file.copy": {
+    "args": [
+      "src",
+      "dst",
+      "recurse",
+      "remove_existing"
+    ],
+    "defaults": [
+      false,
+      false
+    ]
+  },
+  "file.get_source_sum": {
+    "args": [
+      "file_name",
+      "source",
+      "source_hash",
+      "source_hash_name",
+      "saltenv"
+    ],
+    "defaults": [
+      "",
+      "",
+      null,
+      null,
+      "base"
+    ]
+  },
+  "file.pardir": {},
+  "file.get_devmm": {
+    "args": [
+      "name"
+    ]
+  },
+  "file.lstat": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.rmdir": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.rename": {
+    "args": [
+      "src",
+      "dst"
+    ]
+  },
+  "file.get_user": {
+    "args": [
+      "path",
+      "follow_symlinks"
+    ],
+    "defaults": [
+      true
+    ]
+  },
+  "file.is_fifo": {
+    "args": [
+      "name"
+    ]
+  },
+  "file.link": {
+    "args": [
+      "src",
+      "path"
+    ]
+  },
+  "file.contains_regex": {
+    "args": [
+      "path",
+      "regex",
+      "lchar"
+    ],
+    "defaults": [
+      ""
+    ]
+  },
+  "file.get_diff": {
+    "args": [
+      "file1",
+      "file2",
+      "saltenv",
+      "show_filenames",
+      "show_changes",
+      "template",
+      "source_hash_file1",
+      "source_hash_file2"
+    ],
+    "defaults": [
+      "base",
+      true,
+      true,
+      false,
+      null,
+      null
+    ]
+  },
+  "file.user_to_uid": {
+    "args": [
+      "user"
+    ]
+  },
+  "file.line": {
+    "args": [
+      "path",
+      "content",
+      "match",
+      "mode",
+      "location",
+      "before",
+      "after",
+      "show_changes",
+      "backup",
+      "quiet",
+      "indent"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      false,
+      false,
+      true
+    ]
+  },
+  "file.lchown": {
+    "args": [
+      "path",
+      "user",
+      "group"
+    ]
+  },
+  "file.source_list": {
+    "args": [
+      "source",
+      "source_hash",
+      "saltenv"
+    ]
+  },
+  "file.get_gid": {
+    "args": [
+      "path",
+      "follow_symlinks"
+    ],
+    "defaults": [
+      true
+    ]
+  },
+  "file.remove": {
+    "args": [
+      "path"
+    ]
+  },
+  "file.list_backups_dir": {
+    "args": [
+      "path",
+      "limit"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "file.psed": {
+    "args": [
+      "path",
+      "before",
+      "after",
+      "limit",
+      "backup",
+      "flags",
+      "escape_all",
+      "multi"
+    ],
+    "defaults": [
+      "",
+      ".bak",
+      "gMS",
+      false,
+      false
+    ]
+  },
+  "file.restore_backup": {
+    "args": [
+      "path",
+      "backup_id"
+    ]
+  },
+  "file.mknod_fifo": {
+    "args": [
+      "name",
+      "user",
+      "group",
+      "mode"
+    ],
+    "defaults": [
+      null,
+      null,
+      "0660"
+    ]
+  },
+  "file.contains_glob": {
+    "args": [
+      "path",
+      "glob_expr"
+    ]
+  },
+  "file.set_mode": {
+    "args": [
+      "path",
+      "mode"
+    ]
+  },
+  "file.blockreplace": {
+    "args": [
+      "path",
+      "marker_start",
+      "marker_end",
+      "content",
+      "append_if_not_found",
+      "prepend_if_not_found",
+      "backup",
+      "dry_run",
+      "show_changes",
+      "append_newline"
+    ],
+    "defaults": [
+      "#-- start managed zone --",
+      "#-- end managed zone --",
+      "",
+      false,
+      false,
+      ".bak",
+      false,
+      true,
+      false
+    ]
   }
 }

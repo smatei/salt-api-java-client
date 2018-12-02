@@ -1,138 +1,250 @@
 {
-  "test.kwarg": {
+  "pkg.refresh_db": {
+    "args": [
+      "cache_valid_time",
+      "failhard"
+    ],
+    "defaults": [
+      0,
+      false
+    ]
+  },
+  "pkg.get_repo": {
+    "args": [
+      "repo"
+    ],
     "kwargs": true
   },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
-    "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
-    ],
-    "defaults": [
-      null
-    ]
-  },
-  "test.not_loaded": {},
-  "test.assertion": {
-    "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
-    ],
-    "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
+  "pkg.latest_version": {
     "varargs": true,
     "kwargs": true
   },
-  "test.arg_clean": {
-    "varargs": true,
+  "pkg.file_list": {
+    "varargs": true
+  },
+  "pkg.list_repos": {},
+  "pkg.list_upgrades": {
+    "args": [
+      "refresh",
+      "dist_upgrade"
+    ],
+    "defaults": [
+      true,
+      true
+    ],
     "kwargs": true
   },
-  "test.outputter": {
+  "pkg.install": {
     "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "name",
+      "refresh",
+      "fromrepo",
+      "skip_verify",
+      "debconf",
+      "pkgs",
+      "sources",
+      "reinstall",
+      "ignore_epoch"
     ],
     "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.rand_str": {
-    "args": [
-      "size",
-      "hash_type"
-    ],
-    "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
+      null,
+      false,
+      null,
+      false,
+      null,
+      null,
+      null,
+      false,
       false
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "pkg.add_repo_key": {
     "args": [
-      "message"
+      "path",
+      "text",
+      "keyserver",
+      "keyid",
+      "saltenv"
     ],
     "defaults": [
-      "Test Exception"
+      null,
+      null,
+      null,
+      null,
+      "base"
     ]
   },
-  "test.provider": {
+  "pkg.upgrade": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "refresh",
+      "dist_upgrade"
     ],
     "defaults": [
-      60
-    ]
+      true,
+      false
+    ],
+    "kwargs": true
   },
-  "test.tty": {
+  "pkg.available_version": {
     "varargs": true,
     "kwargs": true
+  },
+  "pkg.owner": {
+    "varargs": true
+  },
+  "pkg.unhold": {
+    "args": [
+      "name",
+      "pkgs",
+      "sources"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "pkg.list_pkgs": {
+    "args": [
+      "versions_as_list",
+      "removed",
+      "purge_desired"
+    ],
+    "defaults": [
+      false,
+      false,
+      false
+    ],
+    "kwargs": true
+  },
+  "pkg.remove": {
+    "args": [
+      "name",
+      "pkgs"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "pkg.list_repo_pkgs": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "pkg.get_selections": {
+    "args": [
+      "pattern",
+      "state"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "pkg.del_repo": {
+    "args": [
+      "repo"
+    ],
+    "kwargs": true
+  },
+  "pkg.file_dict": {
+    "varargs": true
+  },
+  "pkg.version": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "pkg.purge": {
+    "args": [
+      "name",
+      "pkgs"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "pkg.upgrade_available": {
+    "args": [
+      "name"
+    ]
+  },
+  "pkg.set_selections": {
+    "args": [
+      "path",
+      "selection",
+      "clear",
+      "saltenv"
+    ],
+    "defaults": [
+      null,
+      null,
+      false,
+      "base"
+    ]
+  },
+  "pkg.version_cmp": {
+    "args": [
+      "pkg1",
+      "pkg2",
+      "ignore_epoch"
+    ],
+    "defaults": [
+      false
+    ]
+  },
+  "pkg.del_repo_key": {
+    "args": [
+      "name"
+    ],
+    "defaults": [
+      null
+    ],
+    "kwargs": true
+  },
+  "pkg.get_repo_keys": {},
+  "pkg.hold": {
+    "args": [
+      "name",
+      "pkgs",
+      "sources"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "pkg.expand_repo_def": {
+    "kwargs": true
+  },
+  "pkg.mod_repo": {
+    "args": [
+      "repo",
+      "saltenv"
+    ],
+    "defaults": [
+      "base"
+    ],
+    "kwargs": true
+  },
+  "pkg.info_installed": {
+    "varargs": true,
+    "kwargs": true
+  },
+  "pkg.autoremove": {
+    "args": [
+      "list_only",
+      "purge"
+    ],
+    "defaults": [
+      false,
+      false
+    ]
   }
 }

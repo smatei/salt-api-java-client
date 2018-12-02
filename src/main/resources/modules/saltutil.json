@@ -1,138 +1,383 @@
 {
-  "test.kwarg": {
-    "kwargs": true
-  },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "saltutil.sync_returners": {
     "args": [
-      "length"
-    ]
-  },
-  "test.cross_test": {
-    "args": [
-      "func",
-      "args"
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
     ],
     "defaults": [
+      null,
+      true,
+      null,
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "saltutil.sync_modules": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
     ],
     "defaults": [
-      42
+      null,
+      true,
+      null,
+      null
     ]
   },
-  "test.collatz": {
+  "saltutil.sync_thorium": {
     "args": [
-      "start"
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      false,
+      null,
+      null
     ]
   },
-  "test.ping": {},
-  "test.arg_type": {
+  "saltutil.sync_pillar": {
+    "args": [
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      true,
+      null,
+      null
+    ]
+  },
+  "saltutil.kill_job": {
+    "args": [
+      "jid"
+    ]
+  },
+  "saltutil.sync_states": {
+    "args": [
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      true,
+      null,
+      null
+    ]
+  },
+  "saltutil.running": {},
+  "saltutil.list_extmods": {},
+  "saltutil.wheel": {
+    "args": [
+      "name"
+    ],
     "varargs": true,
     "kwargs": true
   },
-  "test.arg_clean": {
+  "saltutil.sync_engines": {
+    "args": [
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      false,
+      null,
+      null
+    ]
+  },
+  "saltutil.sync_all": {
+    "args": [
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      true,
+      null,
+      null
+    ]
+  },
+  "saltutil.runner": {
+    "args": [
+      "name",
+      "arg",
+      "kwarg",
+      "full_return",
+      "saltenv",
+      "jid"
+    ],
+    "defaults": [
+      null,
+      null,
+      false,
+      "base",
+      null
+    ],
+    "kwargs": true
+  },
+  "saltutil.refresh_modules": {
+    "kwargs": true
+  },
+  "saltutil.update": {
+    "args": [
+      "version"
+    ],
+    "defaults": [
+      null
+    ]
+  },
+  "saltutil.sync_beacons": {
+    "args": [
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      true,
+      null,
+      null
+    ]
+  },
+  "saltutil.revoke_auth": {
+    "args": [
+      "preserve_minion_cache"
+    ],
+    "defaults": [
+      false
+    ]
+  },
+  "saltutil.sync_outputters": {
+    "args": [
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      true,
+      null,
+      null
+    ]
+  },
+  "saltutil.sync_renderers": {
+    "args": [
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      true,
+      null,
+      null
+    ]
+  },
+  "saltutil.mmodule": {
+    "args": [
+      "saltenv",
+      "fun"
+    ],
     "varargs": true,
     "kwargs": true
   },
-  "test.outputter": {
+  "saltutil.clear_job_cache": {
     "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "hours"
     ],
     "defaults": [
-      9999999999,
+      24
+    ]
+  },
+  "saltutil.refresh_beacons": {},
+  "saltutil.sync_utils": {
+    "args": [
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      true,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "saltutil.kill_all_jobs": {},
+  "saltutil.cmd": {
     "args": [
-      "size",
-      "hash_type"
+      "tgt",
+      "fun",
+      "arg",
+      "timeout",
+      "tgt_type",
+      "ret",
+      "kwarg",
+      "ssh"
     ],
     "defaults": [
-      9999999999,
-      null
-    ]
-  },
-  "test.echo": {
-    "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
-    ],
-    "defaults": [
+      [],
+      null,
+      "glob",
+      "",
+      null,
       false
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "saltutil.is_running": {
     "args": [
-      "message"
+      "fun"
+    ]
+  },
+  "saltutil.term_job": {
+    "args": [
+      "jid"
+    ]
+  },
+  "saltutil.cmd_iter": {
+    "args": [
+      "tgt",
+      "fun",
+      "arg",
+      "timeout",
+      "tgt_type",
+      "ret",
+      "kwarg",
+      "ssh"
     ],
     "defaults": [
-      "Test Exception"
-    ]
-  },
-  "test.provider": {
-    "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
+      [],
+      null,
+      "glob",
+      "",
+      null,
+      false
+    ],
     "kwargs": true
   },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
+  "saltutil.sync_clouds": {
     "args": [
-      "max"
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
     ],
     "defaults": [
-      60
+      null,
+      true,
+      null,
+      null
     ]
   },
-  "test.tty": {
-    "varargs": true,
+  "saltutil.signal_job": {
+    "args": [
+      "jid",
+      "sig"
+    ]
+  },
+  "saltutil.sync_log_handlers": {
+    "args": [
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      true,
+      null,
+      null
+    ]
+  },
+  "saltutil.sync_grains": {
+    "args": [
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      true,
+      null,
+      null
+    ]
+  },
+  "saltutil.regen_keys": {},
+  "saltutil.sync_output": {
+    "args": [
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      true,
+      null,
+      null
+    ]
+  },
+  "saltutil.sync_sdb": {
+    "args": [
+      "saltenv",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "saltutil.refresh_grains": {
     "kwargs": true
-  }
+  },
+  "saltutil.sync_proxymodules": {
+    "args": [
+      "saltenv",
+      "refresh",
+      "extmod_whitelist",
+      "extmod_blacklist"
+    ],
+    "defaults": [
+      null,
+      false,
+      null,
+      null
+    ]
+  },
+  "saltutil.find_cached_job": {
+    "args": [
+      "jid"
+    ]
+  },
+  "saltutil.clear_cache": {},
+  "saltutil.term_all_jobs": {},
+  "saltutil.pillar_refresh": {},
+  "saltutil.find_job": {
+    "args": [
+      "jid"
+    ]
+  },
+  "saltutil.refresh_pillar": {}
 }

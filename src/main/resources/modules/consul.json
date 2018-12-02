@@ -1,138 +1,525 @@
 {
-  "test.kwarg": {
+  "consul.session_create": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
     "kwargs": true
   },
-  "test.conf_test": {},
-  "test.opts_pkg": {},
-  "test.true": {},
-  "test.sleep": {
+  "consul.catalog_service": {
     "args": [
-      "length"
+      "consul_url",
+      "token",
+      "service"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.put": {
+    "args": [
+      "consul_url",
+      "token",
+      "key",
+      "value"
+    ],
+    "defaults": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.acl_create": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.acl_clone": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.event_list": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.catalog_nodes": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.acl_info": {
+    "args": [
+      "consul_url"
+    ],
+    "defaults": [
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.session_info": {
+    "args": [
+      "consul_url",
+      "token",
+      "session"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.agent_check_fail": {
+    "args": [
+      "consul_url",
+      "token",
+      "checkid"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.agent_join": {
+    "args": [
+      "consul_url",
+      "token",
+      "address"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.agent_members": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.agent_check_warn": {
+    "args": [
+      "consul_url",
+      "token",
+      "checkid"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.agent_services": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
     ]
   },
-  "test.cross_test": {
+  "consul.session_destroy": {
     "args": [
-      "func",
-      "args"
+      "consul_url",
+      "token",
+      "session"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.catalog_deregister": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.agent_service_register": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.event_fire": {
+    "args": [
+      "consul_url",
+      "token",
+      "name"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.catalog_datacenters": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "consul.health_service": {
+    "args": [
+      "consul_url",
+      "token",
+      "service"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.agent_check_deregister": {
+    "args": [
+      "consul_url",
+      "token",
+      "checkid"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "consul.health_node": {
+    "args": [
+      "consul_url",
+      "token",
+      "node"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.agent_check_pass": {
+    "args": [
+      "consul_url",
+      "token",
+      "checkid"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.delete": {
+    "args": [
+      "consul_url",
+      "token",
+      "key"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.status_peers": {
+    "args": [
+      "consul_url",
+      "token"
     ],
     "defaults": [
       null
     ]
   },
-  "test.not_loaded": {},
-  "test.assertion": {
+  "consul.catalog_register": {
     "args": [
-      "assertion"
-    ]
-  },
-  "test.fib": {
-    "args": [
-      "num"
-    ]
-  },
-  "test.versions": {},
-  "test.retcode": {
-    "args": [
-      "code"
+      "consul_url",
+      "token"
     ],
     "defaults": [
-      42
-    ]
-  },
-  "test.collatz": {
-    "args": [
-      "start"
-    ]
-  },
-  "test.ping": {},
-  "test.arg_type": {
-    "varargs": true,
+      null,
+      null
+    ],
     "kwargs": true
   },
-  "test.arg_clean": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.outputter": {
+  "consul.agent_self": {
     "args": [
-      "data"
-    ]
-  },
-  "test.attr_call": {},
-  "test.random_hash": {
-    "args": [
-      "size",
-      "hash_type"
+      "consul_url",
+      "token"
     ],
     "defaults": [
-      9999999999,
+      null,
       null
     ]
   },
-  "test.rand_str": {
+  "consul.acl_delete": {
     "args": [
-      "size",
-      "hash_type"
+      "consul_url",
+      "token"
     ],
     "defaults": [
-      9999999999,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.health_state": {
+    "args": [
+      "consul_url",
+      "token",
+      "state"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.status_leader": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
       null
     ]
   },
-  "test.echo": {
+  "consul.agent_leave": {
     "args": [
-      "text"
-    ]
-  },
-  "test.versions_information": {},
-  "test.providers": {},
-  "test.get_opts": {},
-  "test.try": {
-    "args": [
-      "module",
-      "return_try_exception"
+      "consul_url",
+      "token",
+      "node"
     ],
     "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "consul.agent_service_deregister": {
+    "args": [
+      "consul_url",
+      "token",
+      "serviceid"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ]
+  },
+  "consul.agent_maintenance": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.catalog_node": {
+    "args": [
+      "consul_url",
+      "token",
+      "node"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.catalog_services": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.agent_checks": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ]
+  },
+  "consul.acl_list": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.health_checks": {
+    "args": [
+      "consul_url",
+      "token",
+      "service"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.agent_check_register": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.acl_update": {
+    "args": [
+      "consul_url",
+      "token"
+    ],
+    "defaults": [
+      null,
+      null
+    ],
+    "kwargs": true
+  },
+  "consul.session_list": {
+    "args": [
+      "consul_url",
+      "token",
+      "return_list"
+    ],
+    "defaults": [
+      null,
+      null,
       false
     ],
     "kwargs": true
   },
-  "test.module_report": {},
-  "test.arg": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.stack": {},
-  "test.exception": {
+  "consul.get": {
     "args": [
-      "message"
+      "consul_url",
+      "key",
+      "token",
+      "recurse",
+      "decode",
+      "raw"
     ],
     "defaults": [
-      "Test Exception"
+      null,
+      null,
+      null,
+      false,
+      false,
+      false
     ]
   },
-  "test.provider": {
+  "consul.agent_service_maintenance": {
     "args": [
-      "module"
-    ]
-  },
-  "test.versions_report": {},
-  "test.arg_repr": {
-    "varargs": true,
-    "kwargs": true
-  },
-  "test.version": {},
-  "test.false": {},
-  "test.rand_sleep": {
-    "args": [
-      "max"
+      "consul_url",
+      "token",
+      "serviceid"
     ],
     "defaults": [
-      60
-    ]
+      null,
+      null,
+      null
+    ],
+    "kwargs": true
   },
-  "test.tty": {
-    "varargs": true,
+  "consul.list": {
+    "args": [
+      "consul_url",
+      "token",
+      "key"
+    ],
+    "defaults": [
+      null,
+      null,
+      null
+    ],
     "kwargs": true
   }
 }
