@@ -1,4 +1,4 @@
-package com.smatei.salt.client;
+package com.smatei.salt.calls;
 
 /**
  * Possible values for the client parameter in salt API calls.

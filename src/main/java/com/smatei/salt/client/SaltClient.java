@@ -1,6 +1,8 @@
 package com.smatei.salt.client;
 
 import java.net.URI;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import org.apache.http.HttpHost;
@@ -16,7 +18,13 @@ import org.springframework.http.MediaType;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
+import com.smatei.salt.calls.Client;
+import com.smatei.salt.calls.ICall;
+import com.smatei.salt.calls.LocalCall;
+import com.smatei.salt.modules.Test;
 import com.smatei.salt.net.Proxy;
 import com.smatei.salt.target.Glob;
 import com.smatei.salt.target.ITarget;
@@ -34,6 +42,7 @@ public class SaltClient
   private static final Logger logger = Logger.getLogger(SaltClient.class.getName());
   private final ClientConfig config;
   private RestTemplate restTemplate;
+  private final Gson gson = new GsonBuilder().create();
 
   /**
    * @param config
@@ -64,32 +73,28 @@ public class SaltClient
     SaltClient client = new SaltClient(config);
 
     logger.info(client.login());
-    logger.info(client.run(Glob.ALL, Client.LOCAL, "test.ping", null));
+    LocalCall testPing = Test.ping();
+    logger.info(client.run(Glob.ALL, Client.LOCAL, testPing));
   }
 
-  public String run(ITarget<?> target, Client client, String command, String arg)
+  public String run(ITarget<?> target, Client client, ICall call)
   {
     RestTemplate template = createRestTemplate(config.getProxy());
 
-    JsonObject requestParams = new JsonObject();
-    requestParams.addProperty("username", config.getUsername());
-    requestParams.addProperty("password", config.getPassword());
-    requestParams.addProperty("eauth", "pam");
-    requestParams.addProperty("client", client.getValue());
-    target.getProps().forEach((key, value) ->
-    {
-      requestParams.addProperty(key, value.toString());
-    });
-    requestParams.addProperty("fun", command);
-    if (arg != null)
-    {
-      requestParams.addProperty("arg", arg);
-    }
+    Map<String, Object> props = new HashMap<>();
+    props.put("username", config.getUsername());
+    props.put("password", config.getPassword());
+    props.put("eauth", config.getAuthModule().getValue());
+    props.put("client", client.getValue());
+    props.putAll(target.getProps());
+    props.putAll(call.getContent());
+
+    String requestParams = gson.toJson(props);
 
     HttpHeaders headers = new HttpHeaders();
     headers.setContentType(MediaType.APPLICATION_JSON);
 
-    HttpEntity<String> entity = new HttpEntity<String>(requestParams.toString(), headers);
+    HttpEntity<String> entity = new HttpEntity<String>(requestParams, headers);
     String answer = template.postForObject(config.getUrl() + "/run", entity, String.class);
     return answer;
   }
@@ -101,7 +106,7 @@ public class SaltClient
     JsonObject requestParams = new JsonObject();
     requestParams.addProperty("username", config.getUsername());
     requestParams.addProperty("password", config.getPassword());
-    requestParams.addProperty("eauth", "pam");
+    requestParams.addProperty("eauth", config.getAuthModule().getValue());
 
     HttpHeaders headers = new HttpHeaders();
     headers.setContentType(MediaType.APPLICATION_JSON);

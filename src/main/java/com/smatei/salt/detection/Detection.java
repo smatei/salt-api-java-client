@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -16,8 +19,9 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.smatei.salt.calls.Client;
+import com.smatei.salt.calls.LocalCall;
 import com.smatei.salt.client.AuthModule;
-import com.smatei.salt.client.Client;
 import com.smatei.salt.client.ClientConfig;
 import com.smatei.salt.client.SaltClient;
 import com.smatei.salt.target.Glob;
@@ -47,7 +51,8 @@ public class Detection
 
   public void DetectModules()
   {
-    String jsonResponse = client.run(Glob.ALL, Client.LOCAL, "sys.list_modules", null);
+    LocalCall sysListModulesCall = new LocalCall("sys.list_modules", Optional.empty(), Optional.empty());
+    String jsonResponse = client.run(Glob.ALL, Client.LOCAL, sysListModulesCall);
 
     // {"return": [{"minion": ["aliases", "alternatives", ..., "test", "timezone", "tls", "travisci", "uptime", "user", ...]}]}
     JsonArray modules = ParseMinionResponse(jsonResponse).getAsJsonArray();
@@ -56,7 +61,11 @@ public class Detection
     {
       logger.info("processing module " + module.getAsString());
 
-      String moduleJsonResponse = client.run(Glob.ALL, Client.LOCAL, "sys.argspec", module.getAsString());
+      List<String> args = new LinkedList<>();
+      args.add(module.getAsString());
+      LocalCall sysArgSpecModuleCall = new LocalCall("sys.argspec", Optional.of(args), Optional.empty());
+
+      String moduleJsonResponse = client.run(Glob.ALL, Client.LOCAL, sysArgSpecModuleCall);
       JsonElement parsedResponse = ParseMinionResponse(moduleJsonResponse);
       if (!parsedResponse.isJsonObject())
       {
