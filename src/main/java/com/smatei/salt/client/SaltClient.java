@@ -5,19 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import org.apache.http.HttpHost;
-import org.apache.http.auth.AuthScope;
-import org.apache.http.auth.UsernamePasswordCredentials;
-import org.apache.http.client.CredentialsProvider;
-import org.apache.http.client.HttpClient;
-import org.apache.http.impl.client.BasicCredentialsProvider;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
-import org.springframework.web.client.RestTemplate;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
@@ -25,6 +12,7 @@ import com.smatei.salt.calls.Client;
 import com.smatei.salt.calls.ICall;
 import com.smatei.salt.calls.LocalCall;
 import com.smatei.salt.modules.Test;
+import com.smatei.salt.net.ConnectionFactory;
 import com.smatei.salt.net.Proxy;
 import com.smatei.salt.target.Glob;
 import com.smatei.salt.target.ITarget;
@@ -41,8 +29,8 @@ public class SaltClient
 {
   private static final Logger logger = Logger.getLogger(SaltClient.class.getName());
   private final ClientConfig config;
-  private RestTemplate restTemplate;
   private final Gson gson = new GsonBuilder().create();
+  private final ConnectionFactory connectionFactory;
 
   /**
    * @param config
@@ -51,6 +39,7 @@ public class SaltClient
   public SaltClient(ClientConfig config)
   {
     this.config = config;
+    connectionFactory = new ConnectionFactory();
   }
 
   public static void main(String[] args) throws Exception
@@ -72,15 +61,13 @@ public class SaltClient
 
     SaltClient client = new SaltClient(config);
 
-    logger.info(client.login());
+    logger.info(client.login().toString());
     LocalCall testPing = Test.ping();
     logger.info(client.run(Glob.ALL, Client.LOCAL, testPing));
   }
 
   public String run(ITarget<?> target, Client client, ICall call)
   {
-    RestTemplate template = createRestTemplate(config.getProxy());
-
     Map<String, Object> props = new HashMap<>();
     props.put("username", config.getUsername());
     props.put("password", config.getPassword());
@@ -91,56 +78,23 @@ public class SaltClient
 
     String requestParams = gson.toJson(props);
 
-    HttpHeaders headers = new HttpHeaders();
-    headers.setContentType(MediaType.APPLICATION_JSON);
-
-    HttpEntity<String> entity = new HttpEntity<String>(requestParams, headers);
-    String answer = template.postForObject(config.getUrl() + "/run", entity, String.class);
-    return answer;
+    return connectionFactory.create("/run", config, String.class).request(requestParams);
   }
 
+  /**
+   * Perform login and return the token.
+   * <p>
+   * {@code POST /login}
+   *
+   * @return JSON with the authentication token
+   */
   public String login()
   {
-    RestTemplate template = createRestTemplate(config.getProxy());
-
     JsonObject requestParams = new JsonObject();
     requestParams.addProperty("username", config.getUsername());
     requestParams.addProperty("password", config.getPassword());
     requestParams.addProperty("eauth", config.getAuthModule().getValue());
 
-    HttpHeaders headers = new HttpHeaders();
-    headers.setContentType(MediaType.APPLICATION_JSON);
-
-    HttpEntity<String> entity = new HttpEntity<String>(requestParams.toString(), headers);
-    String answer = template.postForObject(config.getUrl() + "/login", entity, String.class);
-    return answer;
-  }
-
-  private RestTemplate createRestTemplate(Proxy proxy)
-  {
-    if (restTemplate != null)
-    {
-      return restTemplate;
-    }
-
-    HttpClientBuilder clientBuilder = HttpClientBuilder.create();
-
-    if (proxy != null)
-    {
-      CredentialsProvider credsProvider = new BasicCredentialsProvider();
-      credsProvider.setCredentials(
-          new AuthScope(proxy.getServer(), proxy.getPort()),
-          new UsernamePasswordCredentials(proxy.getUser(), proxy.getPassword()));
-
-      HttpHost myProxy = new HttpHost(proxy.getServer(), proxy.getPort());
-      clientBuilder.setProxy(myProxy).setDefaultCredentialsProvider(credsProvider);
-    }
-
-    HttpClient httpClient = clientBuilder.disableCookieManagement().build();
-    HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory();
-    factory.setHttpClient(httpClient);
-
-    restTemplate = new RestTemplate(factory);
-    return restTemplate;
+    return connectionFactory.create("/login", config, String.class).request(requestParams.toString());
   }
 }
