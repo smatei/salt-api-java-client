@@ -78,7 +78,7 @@ public class SaltClient
 
     String requestParams = gson.toJson(props);
 
-    return connectionFactory.create("/run", config, String.class).request(requestParams);
+    return connectionFactory.create("/run", config).request(requestParams);
   }
 
   /**
@@ -95,6 +95,6 @@ public class SaltClient
     requestParams.addProperty("password", config.getPassword());
     requestParams.addProperty("eauth", config.getAuthModule().getValue());
 
-    return connectionFactory.create("/login", config, String.class).request(requestParams.toString());
+    return connectionFactory.create("/login", config).request(requestParams.toString());
   }
 }

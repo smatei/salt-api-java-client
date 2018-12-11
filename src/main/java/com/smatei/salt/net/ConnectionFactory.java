@@ -20,8 +20,8 @@ public class ConnectionFactory
    *          the type of the object to be returned
    * @return object representing a connection to the API
    */
-  public <T> IConnection<T> create(String apiEndpoint, ClientConfig config, Class<T> returnClass)
+  public IConnection create(String apiEndpoint, ClientConfig config)
   {
-    return new RestTemplateConnection<T>(apiEndpoint, config, returnClass);
+    return new RestTemplateConnection(apiEndpoint, config);
   }
 }

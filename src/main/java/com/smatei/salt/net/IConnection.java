@@ -3,24 +3,23 @@ package com.smatei.salt.net;
 /**
  * Describes an interface for different HTTP connection implementations.
  *
- * @param <T>
- *          type of result retrieved using this HTTP connection
  */
-public interface IConnection<T>
+public interface IConnection
 {
   /**
    * Send a GET request and parse the result into object of given type.
    *
-   * @return object of type given by resultType
+   * @return response of the GET request
    */
-  T request();
+  String request();
 
   /**
    * Send a POST request and parse the result into object of given type.
    *
    * @param data
    *          the data to send (in JSON format)
-   * @return object of type given by resultType
+   *
+   * @return response of the POST request
    */
-  T request(String params);
+  String request(String params);
 }

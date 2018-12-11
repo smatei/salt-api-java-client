@@ -15,28 +15,25 @@ import org.springframework.web.client.RestTemplate;
 
 import com.smatei.salt.client.ClientConfig;
 
-public class RestTemplateConnection<T> implements IConnection<T>
+public class RestTemplateConnection implements IConnection
 {
   private ClientConfig config;
   private String apiEndpoint;
-  private Class<T> returnClass;
 
-  public RestTemplateConnection(String apiEndpoint, ClientConfig config, Class<T> returnClass)
+  public RestTemplateConnection(String apiEndpoint, ClientConfig config)
   {
     this.config = config;
     this.apiEndpoint = apiEndpoint;
-    this.returnClass = returnClass;
   }
 
   @Override
-  public T request()
+  public String request()
   {
     return request(null);
   }
 
-  @SuppressWarnings("unchecked")
   @Override
-  public T request(String params)
+  public String request(String params)
   {
     RestTemplate template = initConnection();
 
@@ -44,22 +41,7 @@ public class RestTemplateConnection<T> implements IConnection<T>
     headers.setContentType(MediaType.APPLICATION_JSON);
 
     HttpEntity<String> entity = new HttpEntity<String>(params, headers);
-    String response = template.postForObject(config.getUrl() + this.apiEndpoint, entity, String.class);
-
-    // if return type is String.class, then return the response
-    if (IsRetunTypeString())
-    {
-      return (T) response;
-    }
-
-    return parseResponse(response);
-  }
-
-  private T parseResponse(String response)
-  {
-    // todo: write parser
-
-    return null;
+    return template.postForObject(config.getUrl() + this.apiEndpoint, entity, String.class);
   }
 
   private RestTemplate initConnection()
@@ -83,10 +65,5 @@ public class RestTemplateConnection<T> implements IConnection<T>
     factory.setHttpClient(httpClient);
 
     return new RestTemplate(factory);
-  }
-
-  private boolean IsRetunTypeString()
-  {
-    return "java.lang.String".equals(returnClass.getName());
   }
 }
